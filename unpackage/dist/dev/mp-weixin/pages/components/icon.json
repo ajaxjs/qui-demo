@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "Icon",
+  "usingComponents": {
+    "q-icon": "../../uni_modules/kv-qui/components/q-icon/q-icon"
+  }
+}

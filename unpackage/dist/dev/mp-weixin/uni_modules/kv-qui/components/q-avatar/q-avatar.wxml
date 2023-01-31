@@ -1,0 +1,1 @@
+<view class="{{d}}" style="{{e}}"><view class="q-avatar__content row flex-center overflow-hidden" style="{{c}}"><slot></slot><q-icon wx:if="{{a}}" u-i="749bd69c-0" bind:__l="__l" u-p="{{b}}"></q-icon></view></view>

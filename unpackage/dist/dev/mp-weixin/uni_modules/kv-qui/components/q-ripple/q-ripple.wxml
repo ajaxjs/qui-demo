@@ -1,0 +1,1 @@
+<view ref="rip" class="q-ripple"><view wx:for="{{a}}" wx:for-item="vo" wx:key="a" class="q-ripple__inner" style="{{vo.b}}"></view></view>

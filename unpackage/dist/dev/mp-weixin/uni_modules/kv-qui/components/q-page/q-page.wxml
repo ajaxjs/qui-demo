@@ -1,0 +1,1 @@
+<view class="{{['q-page', 'column', b, c]}}" style="{{d}}"><slot name="header"></slot><slot wx:if="{{a}}" name="container"></slot><view wx:else class="q-page-container"><slot></slot></view><slot name="footer"></slot></view>

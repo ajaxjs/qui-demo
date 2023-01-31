@@ -1,0 +1,34 @@
+.q-ripple
+  position: absolute
+  top: 0
+  left: 0 #{"/* rtl:ignore */"}
+  width: 100%
+  height: 100%
+  color: inherit
+  border-radius: inherit
+  z-index: 0
+  pointer-events: none
+  overflow: hidden
+  contain: strict
+
+  &__inner
+    position: absolute
+    width: 5px
+    height: 5px
+    top: 0
+    left: 0 #{"/* rtl:ignore */"}
+    opacity: 0.3
+    color: inherit
+    border-radius: 50%
+    background: currentColor
+    pointer-events: none
+    transition: all .6s
+    //animation: q-ripple .6s
+
+.q-btn--rounded
+  .q-ripple
+    border-radius: $button-rounded-border-radius
+
+.q-btn--round
+  .q-ripple
+    border-radius: 50%

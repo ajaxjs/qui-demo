@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "Field & Input",
+  "usingComponents": {
+    "q-input": "../../uni_modules/kv-qui/components/q-input/q-input"
+  }
+}

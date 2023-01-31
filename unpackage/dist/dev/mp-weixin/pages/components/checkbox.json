@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "Checkbox & Radio",
+  "usingComponents": {
+    "q-radio": "../../uni_modules/kv-qui/components/q-radio/q-radio",
+    "q-banner": "../../uni_modules/kv-qui/components/q-banner/q-banner",
+    "q-separator": "../../uni_modules/kv-qui/components/q-separator/q-separator",
+    "q-checkbox": "../../uni_modules/kv-qui/components/q-checkbox/q-checkbox"
+  }
+}

@@ -1,0 +1,1 @@
+<view class="{{['q-card__section', a, b]}}" style="{{c}}"><slot></slot></view>

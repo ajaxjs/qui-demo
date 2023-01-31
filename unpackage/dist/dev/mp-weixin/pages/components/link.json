@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "Link",
+  "usingComponents": {
+    "q-link": "../../uni_modules/kv-qui/components/q-link/q-link"
+  }
+}

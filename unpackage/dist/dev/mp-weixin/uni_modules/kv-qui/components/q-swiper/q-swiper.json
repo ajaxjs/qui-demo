@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "q-img": "../q-img/q-img"
+  }
+}

@@ -1,0 +1,7 @@
+.q-link {
+  display: inline-block;
+  color: var(--q-primary);
+}
+.q-link a, .q-link navigator {
+  display: inline-block;
+}

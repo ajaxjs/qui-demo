@@ -1,0 +1,45 @@
+
+.q-img
+  width: 100%
+  position: relative
+  display: inline-block
+  vertical-align: middle
+  overflow: hidden
+  
+  &__ratio
+    min-width: 60px
+
+  &__loading .q-spinner
+    font-size: $img-loading-font-size
+
+  &__container
+    border-radius: inherit
+    font-size: 0
+
+  &__image
+    border-radius: inherit
+    width: 100%
+    height: 100%
+    opacity: 0
+
+    &--with-transition
+      transition: opacity .28s ease-in
+
+    &--loaded
+      opacity: 1
+
+  &__content
+    border-radius: inherit
+    pointer-events: none
+
+    #{$nextDiv}
+      pointer-events: all
+      position: $img-content-position
+      padding: $img-content-padding
+      color: $img-content-color
+      background: $img-content-background
+
+  &--no-menu
+    .q-img__image,
+    .q-img__placeholder
+      pointer-events: none

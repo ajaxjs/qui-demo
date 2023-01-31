@@ -1,0 +1,9 @@
+.q-checkbox[data-v-efeee3d1] {
+  vertical-align: middle;
+}
+.q-checkbox[data-v-efeee3d1]:last-child {
+  margin-right: auto;
+}
+.q-checkbox:not(.q-checked) .check-icon[data-v-efeee3d1] {
+  color: rgba(0, 0, 0, 0.54);
+}

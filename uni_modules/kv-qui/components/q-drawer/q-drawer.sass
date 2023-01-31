@@ -1,0 +1,42 @@
+/* 侧边栏 */
+.q-drawer
+  position: fixed
+  top: 0
+  bottom: 0
+  background: #fff
+  z-index: $z-fixed-drawer
+  transition: all 0.15s ease-in
+  &__show
+    transform: translateX(0) !important
+  &--on-top
+    z-index: $z-fixed-drawer
+
+  &--left
+    left: 0
+    transform: translateX(-100%)
+
+  &--right
+    right: 0
+    transform: translateX(100%)
+
+    &.q-drawer--bordered
+      border-left: $layout-border
+  &__content
+    padding-top: var(--status-bar-height)
+    overflow-y: auto
+
+.q-drawer__backdrop
+  z-index: ($z-fixed-drawer - 1) !important
+  will-change: background-color
+  background-color: rgba(0, 0, 0, 0.4)
+  transition: opacity 0.15s ease-in-out
+  opacity: 0
+  &__show
+    opacity: 1 !important
+
+/* #ifdef H5 */
+.q-drawer
+  top: var(--window-top)
+.q-drawer__backdrop
+  top: var(--window-top) !important
+/* #endif */

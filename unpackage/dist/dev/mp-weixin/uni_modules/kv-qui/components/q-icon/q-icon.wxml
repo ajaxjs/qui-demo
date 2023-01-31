@@ -1,0 +1,1 @@
+<view class="{{[e, f]}}" style="{{g + ';' + h}}" aria-hidden="{{true}}" role="presentation"><image wx:if="{{a}}" src="{{b}}"/><text wx:else class="{{d}}">{{c}}</text><slot></slot></view>

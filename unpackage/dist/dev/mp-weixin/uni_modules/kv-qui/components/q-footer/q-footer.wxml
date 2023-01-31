@@ -1,0 +1,1 @@
+<view class="{{['q-footer', 'fixed-bottom', 'row', 'no-wrap', b]}}" style="{{c}}"><slot></slot><view wx:if="{{a}}" class="q-layout__shadow absolute-full overflow-hidden no-pointer-events"></view></view>

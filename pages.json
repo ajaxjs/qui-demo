@@ -1,0 +1,138 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "uni-app"
+			}
+		},
+		{
+			"path": "pages/index/broswer",
+			"style": {
+				"navigationBarTitleText": "Loading..."
+			}
+		},
+		{
+			"path": "pages/layout/grid_row",
+			"style": {
+				"navigationBarTitleText": "Grid Row"
+			}
+		},
+		{
+			"path": "pages/layout/gutter",
+			"style": {
+				"navigationBarTitleText": "Grid Row"
+			}
+		},
+		{
+			"path": "pages/layout/layout",
+			"style": {
+				"navigationBarTitleText": "Layout",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/components/icon",
+			"style": {
+				"navigationBarTitleText": "Icon"
+			}
+		},
+		{
+			"path": "pages/components/avatar",
+			"style": {
+				"navigationBarTitleText": "Avatar"
+			}
+		},
+		{
+			"path": "pages/components/img",
+			"style": {
+				"navigationBarTitleText": "Image"
+			}
+		},
+		{
+			"path": "pages/components/btn",
+			"style": {
+				"navigationBarTitleText": "Button"
+			}
+		},
+		{
+			"path": "pages/components/badge",
+			"style": {
+				"navigationBarTitleText": "Button"
+			}
+		},
+		{
+			"path": "pages/components/card",
+			"style": {
+				"navigationBarTitleText": "Button"
+			}
+		},
+		{
+			"path": "pages/components/item",
+			"style": {
+				"navigationBarTitleText": "List&Item"
+			}
+		},
+		{
+			"path": "pages/components/link",
+			"style": {
+				"navigationBarTitleText": "Link"
+			}
+		},
+		{
+			"path": "pages/components/linear_progress",
+			"style": {
+				"navigationBarTitleText": "linear Progress"
+			}
+		},
+		{
+			"path": "pages/components/input",
+			"style": {
+				"navigationBarTitleText": "Field & Input"
+			}
+		},
+		{
+			"path": "pages/components/form",
+			"style": {
+				"navigationBarTitleText": "Form"
+			}
+		},
+		{
+			"path": "pages/components/checkbox",
+			"style": {
+				"navigationBarTitleText": "Checkbox & Radio"
+			}
+		},
+		{
+			"path": "pages/components/dialog",
+			"style": {
+				"navigationBarTitleText": "Dialog"
+			}
+		},
+		{
+			"path": "pages/components/date_picker",
+			"style": {
+				"navigationBarTitleText": "Date & Picker"
+			}
+		},
+		{
+			"path": "pages/components/tabs",
+			"style": {
+				"navigationBarTitleText": "Tabs"
+			}
+		},
+		{
+			"path": "pages/components/swiper",
+			"style": {
+				"navigationBarTitleText": "Swiper"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"uniIdRouter": {}
+}

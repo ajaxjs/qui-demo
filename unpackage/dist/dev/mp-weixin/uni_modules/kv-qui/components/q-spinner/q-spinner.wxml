@@ -1,0 +1,1 @@
+<view class="{{['q-spinner-mat', b]}}" style="{{'width:' + c + ';' + ('height:' + d)}}"><view class="path" style="{{'border-width:' + a}}"/></view>

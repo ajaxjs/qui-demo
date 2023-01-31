@@ -1,0 +1,59 @@
+// env(safe-area-inset-top) 在不同终端有差异改用JS解决
+// env(safe-area-inset-bottom)
+
+
+page
+  --testColor: red
+
+.q-page
+  background: #ddd
+  transition: all 0.15s ease-in
+  box-sizing: border-box
+  &-container
+    flex: 10000 1 0%
+  &-pushed .q-header
+    top: 0 !important
+
+q-page, .q-page
+  min-height: calc(100vh - var(--window-top))
+
+.q-header, .q-footer, .q-page, .q-page-container
+  position: relative
+  width: 100vw
+
+.q-header, .q-footer
+  z-index: $z-marginals
+
+.q-header
+  //height: var(--header-height)
+  //padding-top: env(safe-area-inset-top)
+  &--hidden
+    transform: translateY(-110%)
+  &--bordered
+    border-bottom: $layout-border
+  .q-layout__shadow
+    bottom: -10px
+    &:after
+      bottom: 10px
+
+.q-footer
+  &--hidden
+    transform: translateY(110%)
+  &--bordered
+    border-top: $layout-border
+  .q-layout__shadow
+    top: -10px
+    &:after
+      top: 10px
+    
+.q-layout__shadow
+  width: 100%
+  &:after
+    content: ''
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    box-shadow: $layout-shadow
+

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "Avatar",
+  "usingComponents": {
+    "q-avatar": "../../uni_modules/kv-qui/components/q-avatar/q-avatar"
+  }
+}

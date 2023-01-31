@@ -1,0 +1,7 @@
+.q-link[data-v-10e78182] {
+  display: inline-block;
+  color: var(--q-primary);
+}
+.q-link a[data-v-10e78182], .q-link uni-navigator[data-v-10e78182] {
+  display: inline-block;
+}

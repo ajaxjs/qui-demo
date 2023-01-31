@@ -1,0 +1,5 @@
+@charset "UTF-8";
+/* 通配符选择器解决方案 (判断失效) */
+.tee > div, .tee > view, .tee > text, .tee > button, .tee > label, .tee > .uni, .tee > q-btn {
+  color: #F00;
+}

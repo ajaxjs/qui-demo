@@ -1,0 +1,13 @@
+{
+  "navigationBarTitleText": "Layout",
+  "usingComponents": {
+    "q-btn": "../../uni_modules/kv-qui/components/q-btn/q-btn",
+    "q-checkbox": "../../uni_modules/kv-qui/components/q-checkbox/q-checkbox",
+    "q-header": "../../uni_modules/kv-qui/components/q-header/q-header",
+    "q-tab": "../../uni_modules/kv-qui/components/q-tab/q-tab",
+    "q-tabs": "../../uni_modules/kv-qui/components/q-tabs/q-tabs",
+    "q-footer": "../../uni_modules/kv-qui/components/q-footer/q-footer",
+    "q-page": "../../uni_modules/kv-qui/components/q-page/q-page",
+    "q-drawer": "../../uni_modules/kv-qui/components/q-drawer/q-drawer"
+  }
+}

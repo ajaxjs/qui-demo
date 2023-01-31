@@ -1,0 +1,1 @@
+<view class="{{[d, e]}}" role="alert"><view wx:if="{{a}}" class="q-banner__avatar col-auto row items-center self-start"><slot name="avatar"></slot></view><view class="q-banner__content col text-body2"><slot></slot></view><view wx:if="{{b}}" class="{{c}}"><slot name="action"></slot></view></view>

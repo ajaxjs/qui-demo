@@ -1,0 +1,6 @@
+.q-picker {
+  height: 300px;
+}
+.q-picker-item {
+  height: 50px;
+}

@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "q-btn": "../q-btn/q-btn",
+    "q-btn-group": "../q-btn-group/q-btn-group",
+    "q-pickerview": "../q-pickerview/q-pickerview",
+    "q-dialog": "../q-dialog/q-dialog"
+  }
+}

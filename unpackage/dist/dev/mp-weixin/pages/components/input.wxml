@@ -1,0 +1,9 @@
+<lanmu wx:if="{{g}}" u-s="{{['d']}}" u-i="19677af6-0" bind:__l="__l" u-p="{{g}}"><view><q-input wx:if="{{b}}" u-i="19677af6-1,19677af6-0" bind:__l="__l" bindupdateModelValue="{{a}}" u-p="{{b}}"/></view><view><q-input wx:if="{{d}}" u-i="19677af6-2,19677af6-0" bind:__l="__l" bindupdateModelValue="{{c}}" u-p="{{d}}"/></view><view><q-input wx:if="{{f}}" u-i="19677af6-3,19677af6-0" bind:__l="__l" bindupdateModelValue="{{e}}" u-p="{{f}}"/></view></lanmu><lanmu wx:if="{{j}}" u-s="{{['d']}}" u-i="19677af6-4" bind:__l="__l" u-p="{{j}}"><q-input wx:if="{{i}}" u-i="19677af6-5,19677af6-4" bind:__l="__l" bindupdateModelValue="{{h}}" u-p="{{i}}"></q-input></lanmu><lanmu wx:if="{{k}}" u-s="{{['d']}}" u-i="19677af6-6" bind:__l="__l" u-p="{{k}}"><view>  focus -> autofocus
+  disabled -> disable
+  
+  支持原生参数：
+  confirm-type
+  confirm-hold
+  adjust-position
+  auto-blur
+</view></lanmu>

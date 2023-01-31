@@ -1,0 +1,13 @@
+{
+  "navigationBarTitleText": "uni-app",
+  "usingComponents": {
+    "q-btn": "../../uni_modules/kv-qui/components/q-btn/q-btn",
+    "q-footer": "../../uni_modules/kv-qui/components/q-footer/q-footer",
+    "q-page": "../../uni_modules/kv-qui/components/q-page/q-page",
+    "q-card-section": "../../uni_modules/kv-qui/components/q-card-section/q-card-section",
+    "q-separator": "../../uni_modules/kv-qui/components/q-separator/q-separator",
+    "q-card": "../../uni_modules/kv-qui/components/q-card/q-card",
+    "q-dialog": "../../uni_modules/kv-qui/components/q-dialog/q-dialog",
+    "q-drawer": "../../uni_modules/kv-qui/components/q-drawer/q-drawer"
+  }
+}

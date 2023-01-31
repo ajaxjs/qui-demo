@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "DatePicker",
+  "usingComponents": {
+    "q-btn": "../../uni_modules/kv-qui/components/q-btn/q-btn",
+    "q-datetime": "../../uni_modules/kv-qui/components/q-datetime/q-datetime"
+  }
+}

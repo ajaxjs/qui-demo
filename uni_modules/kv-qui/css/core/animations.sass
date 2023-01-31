@@ -1,0 +1,202 @@
+/*
+ * Animate.css additions
+ * Adapted from: https://github.com/animate-css/animate.css/blob/6828621a01e145119db6194dc9b4d37325b48aa5/source/_base.css
+ */
+
+\:root
+  --animate-duration: #{$animate-duration}
+  --animate-delay: #{$animate-delay}
+  --animate-repeat: #{$animate-repeat}
+
+.animated
+  animation-duration: var(--animate-duration)
+  animation-fill-mode: both
+
+  &.infinite
+    animation-iteration-count: infinite
+
+  // Last seen on v3.5.2
+  &.hinge
+    animation-duration: 2s
+
+  &.repeat-1
+    animation-iteration-count: var(--animate-repeat)
+
+  &.repeat-2
+    animation-iteration-count: calc(var(--animate-repeat) * 2)
+
+  &.repeat-3
+    animation-iteration-count: calc(var(--animate-repeat) * 3)
+
+  &.delay-1s
+    animation-delay: var(--animate-delay)
+
+  &.delay-2s
+    animation-delay: calc(var(--animate-delay) * 2)
+
+  &.delay-3s
+    animation-delay: calc(var(--animate-delay) * 3)
+
+  &.delay-4s
+    animation-delay: calc(var(--animate-delay) * 4)
+
+  &.delay-5s
+    animation-delay: calc(var(--animate-delay) * 5)
+
+  &.faster
+    animation-duration: calc(var(--animate-duration) / 2)
+
+  &.fast
+    animation-duration: calc(var(--animate-duration) * 0.8)
+
+  &.slow
+    animation-duration: calc(var(--animate-duration) * 2)
+
+  &.slower
+    animation-duration: calc(var(--animate-duration) * 3)
+	
+  &.reverse
+    animation-direction: reverse
+
+  &.forwards
+    animation-fill-mode: forwards
+
+@media print, (prefers-reduced-motion: reduce)
+  .animated
+    animation-duration: 1ms !important
+    transition-duration: 1ms !important
+    animation-iteration-count: 1 !important
+
+  .animated[class*='Out']
+    opacity: 0
+
+/*
+ * Quasar animations
+ */
+
+.q-animate--scale
+  animation: q-scale .15s
+  animation-timing-function: cubic-bezier(.25,.8,.25,1)
+
+@keyframes q-scale
+  0%
+    transform: scale(1)
+  50%
+    transform: scale(1.04)
+  100%
+    transform: scale(1)
+
+.q-animate--fade
+  animation: q-fade .2s
+@keyframes q-fade
+  from
+    opacity: 0
+  to
+    opacity: 1
+
+// 常用动画
+.q-animate--deny
+  animation: q-deny .1s !important
+  animation-timing-function: cubic-bezier(.25,.8,.25,1)
+
+@keyframes q-deny
+  0%
+    transform: scale(1)
+  50%
+    transform: scale(1.03)
+  100%
+    transform: scale(1)
+
+.q-animate--zoom-in
+  animation: zoom-in .3s
+
+@keyframes zoom-in
+  0%
+    opacity: 0
+    transform: scale(0)
+  50%
+    opacity: 1
+    transform: scale(1.04)
+  100%
+    transform: scale(1)
+.q-animate--zoom-out
+  animation: zoom-out .3s
+
+@keyframes zoom-out
+  0%
+    transform: scale(1)
+  100%
+    opacity: 0
+    transform: scale(0)
+
+//slide-in-left
+.q-animate--slide-in-left
+  animation: slide-in-left .3s
+.q-animate--slide-out-left
+  animation: slide-in-left .3s
+  animation-direction: reverse
+@keyframes slide-in-left
+  from
+    transform: translate3d(-100%, 0, 0)
+  to
+    transform: translate3d(0, 0, 0)
+
+//slide-in-right
+.q-animate--slide-in-right
+  animation: slide-in-right .3s
+.q-animate--slide-out-right
+  animation: slide-in-right .3s
+  animation-direction: reverse
+@keyframes slide-in-right
+  from
+    transform: translate3d(100%, 0, 0)
+  to
+    transform: translate3d(0, 0, 0)
+
+//slide-in-down
+.q-animate--slide-in-down
+  animation: slide-in-down .3s
+.q-animate--slide-out-down
+  animation: slide-in-down .3s
+  animation-direction: reverse
+@keyframes slide-in-down
+  from
+    transform: translate3d(0, -100%, 0)
+  to
+    transform: translate3d(0, 0, 0)
+
+//slide-in-up
+.q-animate--slide-in-up
+  animation: slide-in-up .3s
+.q-animate--slide-out-up
+  animation: slide-in-up .3s
+  animation-direction: reverse
+@keyframes slide-in-up
+  from
+    transform: translate3d(0, 100%, 0)
+  to
+    transform: translate3d(0, 0, 0)
+
+.q-animate--flip-in,
+.q-animate--flip-out
+  animation: flip-in .3s
+.q-animate--flip-out
+  animation-direction: reverse
+@keyframes flip-in
+  from
+    transform: perspective(400px) rotate3d(0, 1, 0, -90deg)
+  to
+    transform: perspective(400px) rotate3d(0, 1, 0, 0)
+
+.q-animate--rotate-in,
+.q-animate--rotate-out
+  animation: rotate-in .3s
+.q-animate--rotate-out
+  animation-direction: reverse
+@keyframes rotate-in
+  from
+    opacity: 0
+    transform: scale3d(0, 0, 1) rotate3d(0, 0, 1, 90deg)
+  to
+    opacity: 1
+    transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 0)

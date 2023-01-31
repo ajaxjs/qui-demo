@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "Form",
+  "usingComponents": {
+    "q-input": "../../uni_modules/kv-qui/components/q-input/q-input",
+    "q-checkbox": "../../uni_modules/kv-qui/components/q-checkbox/q-checkbox",
+    "q-btn": "../../uni_modules/kv-qui/components/q-btn/q-btn",
+    "q-form": "../../uni_modules/kv-qui/components/q-form/q-form",
+    "q-datetime": "../../uni_modules/kv-qui/components/q-datetime/q-datetime",
+    "q-field": "../../uni_modules/kv-qui/components/q-field/q-field",
+    "q-radio": "../../uni_modules/kv-qui/components/q-radio/q-radio"
+  }
+}

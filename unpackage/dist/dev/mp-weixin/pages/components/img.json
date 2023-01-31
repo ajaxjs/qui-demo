@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "Image",
+  "usingComponents": {
+    "q-img": "../../uni_modules/kv-qui/components/q-img/q-img"
+  }
+}

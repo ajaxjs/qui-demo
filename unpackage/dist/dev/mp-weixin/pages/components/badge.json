@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "Button",
+  "usingComponents": {
+    "q-badge": "../../uni_modules/kv-qui/components/q-badge/q-badge",
+    "q-icon": "../../uni_modules/kv-qui/components/q-icon/q-icon",
+    "q-separator": "../../uni_modules/kv-qui/components/q-separator/q-separator",
+    "q-btn": "../../uni_modules/kv-qui/components/q-btn/q-btn"
+  }
+}

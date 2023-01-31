@@ -1,0 +1,34 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index/broswer",
+    "pages/layout/grid_row",
+    "pages/layout/gutter",
+    "pages/layout/layout",
+    "pages/components/icon",
+    "pages/components/avatar",
+    "pages/components/img",
+    "pages/components/btn",
+    "pages/components/badge",
+    "pages/components/card",
+    "pages/components/item",
+    "pages/components/link",
+    "pages/components/linear_progress",
+    "pages/components/input",
+    "pages/components/form",
+    "pages/components/checkbox",
+    "pages/components/dialog",
+    "pages/components/date_picker",
+    "pages/components/tabs",
+    "pages/components/swiper"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "usingComponents": {
+    "lanmu": "/components/Lanmu"
+  }
+}

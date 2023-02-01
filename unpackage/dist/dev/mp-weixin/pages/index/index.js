@@ -77,7 +77,7 @@ const _sfc_main = {
             path: "/pages/components/dialog"
           },
           {
-            name: "Date Picker",
+            name: "Date & Picker",
             path: "/pages/components/date_picker"
           },
           {
@@ -87,6 +87,12 @@ const _sfc_main = {
           {
             name: "Swiper",
             path: "/pages/components/swiper"
+          }
+        ],
+        "Plugins": [
+          {
+            name: "UniAPP\u5C01\u88C5",
+            path: "/pages/plugins/uniapp"
           }
         ]
       },
@@ -109,26 +115,14 @@ const _sfc_main = {
 };
 if (!Array) {
   const _component_Lanmu = common_vendor.resolveComponent("Lanmu");
-  const _easycom_q_btn2 = common_vendor.resolveComponent("q-btn");
-  const _easycom_q_footer2 = common_vendor.resolveComponent("q-footer");
   const _easycom_q_page2 = common_vendor.resolveComponent("q-page");
-  const _easycom_q_card_section2 = common_vendor.resolveComponent("q-card-section");
-  const _easycom_q_separator2 = common_vendor.resolveComponent("q-separator");
-  const _easycom_q_card2 = common_vendor.resolveComponent("q-card");
-  const _easycom_q_dialog2 = common_vendor.resolveComponent("q-dialog");
   const _easycom_q_drawer2 = common_vendor.resolveComponent("q-drawer");
-  (_component_Lanmu + _easycom_q_btn2 + _easycom_q_footer2 + _easycom_q_page2 + _easycom_q_card_section2 + _easycom_q_separator2 + _easycom_q_card2 + _easycom_q_dialog2 + _easycom_q_drawer2)();
+  (_component_Lanmu + _easycom_q_page2 + _easycom_q_drawer2)();
 }
-const _easycom_q_btn = () => "../../uni_modules/kv-qui/components/q-btn/q-btn.js";
-const _easycom_q_footer = () => "../../uni_modules/kv-qui/components/q-footer/q-footer.js";
 const _easycom_q_page = () => "../../uni_modules/kv-qui/components/q-page/q-page.js";
-const _easycom_q_card_section = () => "../../uni_modules/kv-qui/components/q-card-section/q-card-section.js";
-const _easycom_q_separator = () => "../../uni_modules/kv-qui/components/q-separator/q-separator.js";
-const _easycom_q_card = () => "../../uni_modules/kv-qui/components/q-card/q-card.js";
-const _easycom_q_dialog = () => "../../uni_modules/kv-qui/components/q-dialog/q-dialog.js";
 const _easycom_q_drawer = () => "../../uni_modules/kv-qui/components/q-drawer/q-drawer.js";
 if (!Math) {
-  (_easycom_q_btn + _easycom_q_footer + _easycom_q_page + _easycom_q_card_section + _easycom_q_separator + _easycom_q_card + _easycom_q_dialog + _easycom_q_drawer)();
+  (_easycom_q_page + _easycom_q_drawer)();
 }
 function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   return {
@@ -148,55 +142,11 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
         })
       };
     }),
-    b: common_vendor.o(($event) => $data.test = !$data.test),
-    c: common_vendor.p({
-      color: "green"
-    }),
-    d: common_vendor.t($data.showSide),
-    e: common_vendor.o(($event) => $data.showSide = !$data.showSide),
-    f: common_vendor.p({
-      color: "green"
-    }),
-    g: common_vendor.o(($event) => $data.showDlg = true),
-    h: common_vendor.p({
-      color: "green"
-    }),
-    i: common_vendor.f(100, (n, k0, i0) => {
-      return {
-        a: common_vendor.t(n),
-        b: n
-      };
-    }),
-    j: $data.test,
-    k: common_vendor.p({
-      elevated: true,
-      className: "bg-blue-2"
-    }),
-    l: common_vendor.p({
+    b: common_vendor.p({
       push: $data.showSide ? "left" : ""
     }),
-    m: common_vendor.o(_ctx.$q.closePopup),
-    n: common_vendor.p({
-      dense: true,
-      flat: true,
-      icon: "close"
-    }),
-    o: common_vendor.p({
-      className: "row items-center"
-    }),
-    p: common_vendor.f(5, (i, k0, i0) => {
-      return {
-        a: common_vendor.t(i),
-        b: i
-      };
-    }),
-    q: common_vendor.o(($event) => $data.showDlg = $event),
-    r: common_vendor.p({
-      position: "bottom",
-      modelValue: $data.showDlg
-    }),
-    s: common_vendor.o(($event) => $data.showSide = $event),
-    t: common_vendor.p({
+    c: common_vendor.o(($event) => $data.showSide = $event),
+    d: common_vendor.p({
       modelValue: $data.showSide
     })
   };

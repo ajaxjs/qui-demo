@@ -30,14 +30,16 @@ if (!Array) {
   const _easycom_q_separator2 = common_vendor.resolveComponent("q-separator");
   const _component_Lanmu = common_vendor.resolveComponent("Lanmu");
   const _easycom_q_checkbox2 = common_vendor.resolveComponent("q-checkbox");
-  (_easycom_q_radio2 + _easycom_q_banner2 + _easycom_q_separator2 + _component_Lanmu + _easycom_q_checkbox2)();
+  const _easycom_q_page2 = common_vendor.resolveComponent("q-page");
+  (_easycom_q_radio2 + _easycom_q_banner2 + _easycom_q_separator2 + _component_Lanmu + _easycom_q_checkbox2 + _easycom_q_page2)();
 }
 const _easycom_q_radio = () => "../../uni_modules/kv-qui/components/q-radio/q-radio.js";
 const _easycom_q_banner = () => "../../uni_modules/kv-qui/components/q-banner/q-banner.js";
 const _easycom_q_separator = () => "../../uni_modules/kv-qui/components/q-separator/q-separator.js";
 const _easycom_q_checkbox = () => "../../uni_modules/kv-qui/components/q-checkbox/q-checkbox.js";
+const _easycom_q_page = () => "../../uni_modules/kv-qui/components/q-page/q-page.js";
 if (!Math) {
-  (_easycom_q_radio + _easycom_q_banner + _easycom_q_separator + _easycom_q_checkbox)();
+  (_easycom_q_radio + _easycom_q_banner + _easycom_q_separator + _easycom_q_checkbox + _easycom_q_page)();
 }
 function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   return {

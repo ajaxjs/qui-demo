@@ -23,9 +23,13 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
+.q-page-container > .lanmu:first-child {
+  margin-top: 10px;
+}
 .lanmu {
   border: #d9d9d9 solid 1px;
   border-radius: 5px;
+  background: #FFF;
 }
 .lanmu .title {
   border-bottom: #d9d9d9 solid 1px;

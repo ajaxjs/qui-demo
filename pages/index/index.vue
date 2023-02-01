@@ -9,27 +9,7 @@
 				</view>
 			</view>
 		</Lanmu>
-		<view class="q-pa-sm">
-			<q-btn color="green" @click="test = !test">显示更多测试内容</q-btn>
-			<view class="q-pa-sm" v-show="test" v-for="n in 100" :key="n">
-				- line {{n}}
-			</view>
-		</view>
 	</q-page>
-	
-	<!-- Dialog -->
-	<q-dialog v-model="showDlg" position="bottom">
-		<q-card>
-			<q-card-section className="row items-center">
-				<view class="col">标题</view>
-				<q-btn dense flat icon="close" @click="$q.closePopup" />
-			</q-card-section>
-			<q-separator />
-			<q-card-section>
-				<view v-for="i in 5" :key="i">{{i}}-123456</view>
-			</q-card-section>
-		</q-card>
-	</q-dialog>
 	
 	<q-drawer v-model="showSide">侧栏</q-drawer>
 	
@@ -123,6 +103,12 @@
 							name: 'Swiper',
 							path: '/pages/components/swiper'
 						},
+					],
+					'Plugins': [
+						{
+							name:'UniAPP封装',
+							path: '/pages/plugins/uniapp'
+						}
 					]
 				},
 				show: false,

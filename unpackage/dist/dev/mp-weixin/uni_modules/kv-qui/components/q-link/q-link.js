@@ -6,7 +6,8 @@ require("../../utils/uniapp/page.js");
 const _sfc_main = {
   name: "QLink",
   props: {
-    ...uni_modules_kvQui_composables_private_useLink.useLinkProps
+    ...uni_modules_kvQui_composables_private_useLink.useLinkProps,
+    color: String
   },
   setup(props) {
     const linkPrms = uni_modules_kvQui_composables_private_useLink.useLink(props);
@@ -35,7 +36,8 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     }))
   } : {}, {
     e: _ctx.mp,
-    h: _ctx.href
+    h: _ctx.href,
+    k: common_vendor.n($props.color ? "text-" + $props.color : "")
   });
 }
 const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "E:/AppProject/qui-demo/uni_modules/kv-qui/components/q-link/q-link.vue"]]);

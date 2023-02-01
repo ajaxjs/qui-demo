@@ -10,7 +10,8 @@ if (!Array) {
   const _easycom_q_avatar2 = common_vendor.resolveComponent("q-avatar");
   const _easycom_q_icon2 = common_vendor.resolveComponent("q-icon");
   const _easycom_q_separator2 = common_vendor.resolveComponent("q-separator");
-  (_easycom_q_item_section2 + _easycom_q_item2 + _easycom_q_list2 + _component_Lanmu + _easycom_q_item_label2 + _easycom_q_avatar2 + _easycom_q_icon2 + _easycom_q_separator2)();
+  const _easycom_q_page2 = common_vendor.resolveComponent("q-page");
+  (_easycom_q_item_section2 + _easycom_q_item2 + _easycom_q_list2 + _component_Lanmu + _easycom_q_item_label2 + _easycom_q_avatar2 + _easycom_q_icon2 + _easycom_q_separator2 + _easycom_q_page2)();
 }
 const _easycom_q_item_section = () => "../../uni_modules/kv-qui/components/q-item-section/q-item-section.js";
 const _easycom_q_item = () => "../../uni_modules/kv-qui/components/q-item/q-item.js";
@@ -19,8 +20,9 @@ const _easycom_q_item_label = () => "../../uni_modules/kv-qui/components/q-item-
 const _easycom_q_avatar = () => "../../uni_modules/kv-qui/components/q-avatar/q-avatar.js";
 const _easycom_q_icon = () => "../../uni_modules/kv-qui/components/q-icon/q-icon.js";
 const _easycom_q_separator = () => "../../uni_modules/kv-qui/components/q-separator/q-separator.js";
+const _easycom_q_page = () => "../../uni_modules/kv-qui/components/q-page/q-page.js";
 if (!Math) {
-  (_easycom_q_item_section + _easycom_q_item + _easycom_q_list + _easycom_q_item_label + _easycom_q_avatar + _easycom_q_icon + _easycom_q_separator)();
+  (_easycom_q_item_section + _easycom_q_item + _easycom_q_list + _easycom_q_item_label + _easycom_q_avatar + _easycom_q_icon + _easycom_q_separator + _easycom_q_page)();
 }
 function _sfc_render(_ctx, _cache) {
   return {

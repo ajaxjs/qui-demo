@@ -15,11 +15,13 @@ const _sfc_main = {
 if (!Array) {
   const _easycom_q_icon2 = common_vendor.resolveComponent("q-icon");
   const _component_Lanmu = common_vendor.resolveComponent("Lanmu");
-  (_easycom_q_icon2 + _component_Lanmu)();
+  const _easycom_q_page2 = common_vendor.resolveComponent("q-page");
+  (_easycom_q_icon2 + _component_Lanmu + _easycom_q_page2)();
 }
 const _easycom_q_icon = () => "../../uni_modules/kv-qui/components/q-icon/q-icon.js";
+const _easycom_q_page = () => "../../uni_modules/kv-qui/components/q-page/q-page.js";
 if (!Math) {
-  _easycom_q_icon();
+  (_easycom_q_icon + _easycom_q_page)();
 }
 function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   return {
@@ -76,7 +78,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     o: common_vendor.f(["xs", "sm", "md", "lg", "xl"], (size, k0, i0) => {
       return {
         a: size,
-        b: "b20fa5e4-15-" + i0 + ",b20fa5e4-14",
+        b: "b20fa5e4-16-" + i0 + ",b20fa5e4-15",
         c: common_vendor.p({
           size,
           name: "font_download"
@@ -89,7 +91,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     q: common_vendor.f($setup.imgIcon, (src, i, i0) => {
       return {
         a: common_vendor.t(src),
-        b: "b20fa5e4-17-" + i0 + ",b20fa5e4-16",
+        b: "b20fa5e4-18-" + i0 + ",b20fa5e4-17",
         c: common_vendor.p({
           size: "md",
           name: src

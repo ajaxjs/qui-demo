@@ -5,40 +5,13 @@ require("./dateUtils.js");
 require("../../utils/clone.js");
 require("./Nongli.js");
 require("../../utils/format.js");
+require("../q-picker/usePicker.js");
+require("../q-pickerview/usePickerview.js");
 const _sfc_main = {
-  props: {
-    ...uni_modules_kvQui_components_qDatetime_useDateTime.useDateTimeProps,
-    show: Boolean,
-    position: String
-  },
+  props: uni_modules_kvQui_components_qDatetime_useDateTime.useDateTimeProps,
   emits: ["update:modelValue", "update:show", "confirm", "change", "open", "close"],
   setup(props, { emit }) {
-    const datePosition = common_vendor.computed$1(() => props.position);
-    const indicatorStyle = `height: 50px;`;
-    const dateTime = uni_modules_kvQui_components_qDatetime_useDateTime.useDateTime({ props, emit });
-    function open(evt) {
-      emit("update:show", true);
-      emit("open", evt);
-    }
-    function close(evt) {
-      emit("update:show", false);
-      emit("close", evt);
-    }
-    function confirm(evt) {
-      const { dateVal } = dateTime;
-      console.log("confirm", dateVal.value);
-      emit("update:modelValue", dateVal.value.text);
-      emit("confirm", dateVal);
-      close();
-    }
-    return {
-      ...dateTime,
-      datePosition,
-      indicatorStyle,
-      open,
-      close,
-      confirm
-    };
+    return uni_modules_kvQui_components_qDatetime_useDateTime.useDateTime({ props, emit });
   }
 };
 if (!Array) {
@@ -56,49 +29,52 @@ if (!Math) {
   (_easycom_q_btn + _easycom_q_btn_group + _easycom_q_pickerview + _easycom_q_dialog)();
 }
 function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
-  return {
-    a: common_vendor.o($setup.close),
+  return common_vendor.e({
+    a: common_vendor.o(_ctx.close),
     b: common_vendor.p({
       outline: true,
       color: "blue-grey",
       label: "\u53D6\u6D88"
     }),
-    c: common_vendor.o(($event) => _ctx.onLifaChange("\u516C")),
-    d: common_vendor.p({
+    c: !_ctx.hideLifa
+  }, !_ctx.hideLifa ? {
+    d: common_vendor.o(($event) => _ctx.onLifaChange("\u516C")),
+    e: common_vendor.p({
       outline: _ctx.lifa !== "\u516C",
       color: "primary",
       label: "\u516C\u5386"
     }),
-    e: common_vendor.o(($event) => _ctx.onLifaChange("\u519C")),
-    f: common_vendor.p({
+    f: common_vendor.o(($event) => _ctx.onLifaChange("\u519C")),
+    g: common_vendor.p({
       outline: _ctx.lifa !== "\u519C",
       color: "primary",
       label: "\u519C\u5386"
     }),
-    g: common_vendor.p({
+    h: common_vendor.p({
       flat: true
-    }),
-    h: common_vendor.o($setup.confirm),
-    i: common_vendor.p({
+    })
+  } : {}, {
+    i: common_vendor.o(_ctx.confirm),
+    j: common_vendor.p({
       color: "primary",
       label: "\u786E\u5B9A"
     }),
-    j: common_vendor.sr("pickView", "603e6f72-6,603e6f72-0"),
-    k: common_vendor.o(_ctx.onDateReady),
-    l: common_vendor.o(_ctx.onDateChange),
-    m: common_vendor.o(($event) => _ctx.innerValue = $event),
-    n: common_vendor.p({
+    k: common_vendor.sr("pickView", "603e6f72-6,603e6f72-0"),
+    l: common_vendor.o(_ctx.onDateReady),
+    m: common_vendor.o(_ctx.onDateChange),
+    n: common_vendor.o(($event) => _ctx.innerValue = $event),
+    o: common_vendor.p({
       align: "center",
       options: _ctx.options,
       modelValue: _ctx.innerValue
     }),
-    o: common_vendor.sr("rootRef", "603e6f72-0"),
-    p: common_vendor.p({
-      modelValue: $props.show,
-      position: $setup.datePosition,
+    p: common_vendor.sr("rootRef", "603e6f72-0"),
+    q: common_vendor.p({
+      modelValue: _ctx.show,
+      position: _ctx.position,
       persistent: true
     })
-  };
+  });
 }
 const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "E:/AppProject/qui-demo/uni_modules/kv-qui/components/q-datetime/q-datetime.vue"]]);
 wx.createComponent(Component);

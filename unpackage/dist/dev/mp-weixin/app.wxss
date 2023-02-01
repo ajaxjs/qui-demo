@@ -181,7 +181,7 @@ page {
   --testColor: red;
 }
 .q-page {
-  background: #ddd;
+  background: #e0e0e0;
   transition: all 0.15s ease-in;
   box-sizing: border-box;
 }
@@ -196,9 +196,15 @@ q-page, .q-page {
 }
 .q-header, .q-footer, .q-page, .q-page-container {
   position: relative;
+  width: 100vw;
 }
 .q-header, .q-footer {
   z-index: 2000;
+  background-color: #fafafa;
+}
+.q-header {
+  padding-left: 5px;
+  padding-right: 5px;
 }
 .q-header--hidden {
   transform: translateY(-110%);
@@ -756,37 +762,6 @@ q-btn-group {
 }
 .q-badge--rounded {
   border-radius: 1em;
-}
-.q-menu {
-  position: fixed !important;
-  display: inline-block;
-  max-width: 95vw;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12);
-  background: #fff;
-  border-radius: 4px;
-  overflow-y: auto;
-  overflow-x: hidden;
-  outline: 0;
-  max-height: 65vh;
-  z-index: 6000;
-}
-.q-menu--square {
-  border-radius: 0;
-}
-.q-btn .q-menu {
-  position: absolute !important;
-}
-.q-btn .q-menu__left {
-  left: 0;
-}
-.q-btn .q-menu__right {
-  right: 0;
-}
-.q-btn .q-menu__top {
-  bottom: 100%;
-}
-.q-btn .q-menu__bottom {
-  top: 100%;
 }
 [q-card] {
   display: block;

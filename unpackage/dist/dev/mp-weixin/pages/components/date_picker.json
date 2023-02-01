@@ -1,7 +1,11 @@
 {
-  "navigationBarTitleText": "DatePicker",
+  "navigationBarTitleText": "Date & Picker",
   "usingComponents": {
     "q-btn": "../../uni_modules/kv-qui/components/q-btn/q-btn",
-    "q-datetime": "../../uni_modules/kv-qui/components/q-datetime/q-datetime"
+    "q-separator": "../../uni_modules/kv-qui/components/q-separator/q-separator",
+    "q-datetime": "../../uni_modules/kv-qui/components/q-datetime/q-datetime",
+    "q-picker": "../../uni_modules/kv-qui/components/q-picker/q-picker",
+    "q-pickerview": "../../uni_modules/kv-qui/components/q-pickerview/q-pickerview",
+    "q-page": "../../uni_modules/kv-qui/components/q-page/q-page"
   }
 }

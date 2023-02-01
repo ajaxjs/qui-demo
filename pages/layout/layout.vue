@@ -25,13 +25,14 @@
 					<view class="">
 						当前页：{{tab}}
 					</view>
+					<q-link to="/pages/layout/layout2">内部滚动页面 &gt;</q-link>
 				</view>
 			</scroll-view>
 		</template>
 
 		<!-- 头部内容 -->
 		<template #header>
-			<q-header bordered className="bg-white">
+			<q-header bordered>
 				<q-btn flat icon="menu" @click="showLeftSide = !showLeftSide" />
 				<view class="col row justify-center items-center">
 					自定义头部

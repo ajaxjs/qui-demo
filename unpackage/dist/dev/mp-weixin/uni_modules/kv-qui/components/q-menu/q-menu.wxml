@@ -1,1 +1,0 @@
-<view role="menu" mode-class="{{a}}" hidden="{{!b}}" class="{{['q-menu', c]}}" style="{{d}}"><slot></slot></view>

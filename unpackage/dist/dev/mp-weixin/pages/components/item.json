@@ -7,6 +7,7 @@
     "q-item-label": "../../uni_modules/kv-qui/components/q-item-label/q-item-label",
     "q-avatar": "../../uni_modules/kv-qui/components/q-avatar/q-avatar",
     "q-icon": "../../uni_modules/kv-qui/components/q-icon/q-icon",
-    "q-separator": "../../uni_modules/kv-qui/components/q-separator/q-separator"
+    "q-separator": "../../uni_modules/kv-qui/components/q-separator/q-separator",
+    "q-page": "../../uni_modules/kv-qui/components/q-page/q-page"
   }
 }

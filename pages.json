@@ -32,6 +32,12 @@
 			}
 		},
 		{
+			"path": "pages/layout/layout2",
+			"style": {
+				"navigationBarTitleText": "Layout"
+			}
+		},
+		{
 			"path": "pages/components/icon",
 			"style": {
 				"navigationBarTitleText": "Icon"
@@ -125,6 +131,12 @@
 			"path": "pages/components/swiper",
 			"style": {
 				"navigationBarTitleText": "Swiper"
+			}
+		},
+		{
+			"path": "pages/plugins/uniapp",
+			"style": {
+				"navigationBarTitleText": "Uniapp 封装"
 			}
 		}
 	],

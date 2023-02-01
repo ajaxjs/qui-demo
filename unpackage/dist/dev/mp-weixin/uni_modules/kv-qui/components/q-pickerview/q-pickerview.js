@@ -1,33 +1,9 @@
 "use strict";
 const common_vendor = require("../../../../common/vendor.js");
 const uni_modules_kvQui_utils_is = require("../../utils/is.js");
+const uni_modules_kvQui_components_qPickerview_usePickerview = require("./usePickerview.js");
 const _sfc_main = {
-  props: {
-    modelValue: Array,
-    options: {
-      type: Array,
-      require: true
-    },
-    perfix: [String, Array],
-    suffix: [String, Array],
-    align: String,
-    itemLabel: {
-      type: String,
-      default: "label"
-    },
-    itemValue: {
-      type: String,
-      default: "value"
-    },
-    itemHeight: {
-      type: Number,
-      default: 40
-    },
-    rowNumber: {
-      type: Number,
-      default: 5
-    }
-  },
+  props: uni_modules_kvQui_components_qPickerview_usePickerview.usePkViewProps,
   emits: ["update:modelValue", "change", "pickstart", "pickend", "ready"],
   setup(props, { emit }) {
     const initValue = props.options ? new Array(props.options.length).fill(0) : [];
@@ -104,15 +80,15 @@ const _sfc_main = {
 };
 function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   return {
-    a: common_vendor.f($props.options, (item, i, i0) => {
+    a: common_vendor.f(_ctx.options, (item, i, i0) => {
       return {
         a: common_vendor.f(item, (vo, d, i1) => {
-          return common_vendor.e($props.perfix ? {
-            a: common_vendor.t($setup.getFix($props.perfix, i))
+          return common_vendor.e(_ctx.perfix ? {
+            a: common_vendor.t($setup.getFix(_ctx.perfix, i))
           } : {}, {
             b: common_vendor.t($setup.getItem(vo, "label"))
-          }, $props.suffix ? {
-            c: common_vendor.t($setup.getFix($props.suffix, i))
+          }, _ctx.suffix ? {
+            c: common_vendor.t($setup.getFix(_ctx.suffix, i))
           } : {}, {
             d: common_vendor.n($setup.indexValue[i] == d ? "active" : ""),
             e: d
@@ -121,8 +97,8 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
         b: i
       };
     }),
-    b: $props.perfix,
-    c: $props.suffix,
+    b: _ctx.perfix,
+    c: _ctx.suffix,
     d: common_vendor.s($setup.indicatorStyle),
     e: $setup.indexValue,
     f: common_vendor.s($setup.styles),

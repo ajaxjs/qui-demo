@@ -3,14 +3,18 @@ const common_vendor = require("../../../../common/vendor.js");
 const uni_modules_kvQui_components_qDatetime_dateUtils = require("./dateUtils.js");
 const uni_modules_kvQui_components_qDatetime_Nongli = require("./Nongli.js");
 const uni_modules_kvQui_utils_format = require("../../utils/format.js");
+const uni_modules_kvQui_components_qPicker_usePicker = require("../q-picker/usePicker.js");
 const yearVali = (y) => y >= 1900 && y <= 2100;
+const lifaVali = (lf) => ["\u516C", "\u519C"].includes(lf);
 const useDateTimeProps = {
+  ...uni_modules_kvQui_components_qPicker_usePicker.usePickerProps,
   modelValue: String,
   lifa: {
     type: String,
     default: "\u516C",
-    validate: (vo) => ["\u516C", "\u519C"].includes(vo)
+    validate: lifaVali
   },
+  hideLifa: Boolean,
   defaults: String,
   dateType: {
     type: String,
@@ -36,22 +40,37 @@ const mapMax = function(min, max) {
   }
   return retn;
 };
+const getDftStr = ({ lifa, modelValue, hideLifa, defaults }) => {
+  let dftStr;
+  if (modelValue) {
+    dftStr = lifaVali(modelValue.substr(0, 1)) ? modelValue : lifa + "\u5386 " + modelValue;
+  } else {
+    dftStr = defaults || new Date();
+  }
+  return dftStr;
+};
 const useDateTime = ({ props, emit }) => {
   const min = uni_modules_kvQui_components_qDatetime_dateUtils.qdate(props.min);
   const max = uni_modules_kvQui_components_qDatetime_dateUtils.qdate(props.max);
-  const dft = uni_modules_kvQui_components_qDatetime_dateUtils.qdate(props.modelValue ? props.lifa + " " + props.modelValue : props.defaults || new Date());
+  const dft = uni_modules_kvQui_components_qDatetime_dateUtils.qdate(getDftStr(props));
   const dateArr = dft.format("YYYY-M-D" + (props.dateType == "datetime" ? "-H-m" : "")).split("-").map((vo) => Number(vo));
+  const lifa = common_vendor.ref(dft.$lifa);
   if (dft.$leap)
     dateArr[1] = -dateArr[1];
-  console.log(dft);
-  const lifa = common_vendor.ref(dft.$lifa);
   const innerValue = common_vendor.ref(dateArr);
   const dateRes = common_vendor.ref(null);
   const dateVal = common_vendor.ref(null);
   const format = common_vendor.ref(props.format || "YYYY-MM-DD" + (props.dateType == "datetime" ? " HH:mm" : ""));
   const options = common_vendor.computed$1(() => {
-    const [year, month] = innerValue.value;
-    const maxDay = lifa.value == "\u516C" ? uni_modules_kvQui_components_qDatetime_Nongli.calendar.solarDays(year, month) : month < 0 ? uni_modules_kvQui_components_qDatetime_Nongli.calendar.leapDays(year) : uni_modules_kvQui_components_qDatetime_Nongli.calendar.monthDays(year, month);
+    let [year, month] = innerValue.value;
+    let maxDay;
+    if (lifa.value == "\u516C") {
+      month = Math.abs(month);
+      maxDay = uni_modules_kvQui_components_qDatetime_Nongli.calendar.solarDays(year, month);
+    } else {
+      month = uni_modules_kvQui_components_qDatetime_Nongli.calendar.leapMonth(year) == 0 ? Math.abs(month) : month;
+      maxDay = month < 0 ? uni_modules_kvQui_components_qDatetime_Nongli.calendar.leapDays(year) : uni_modules_kvQui_components_qDatetime_Nongli.calendar.monthDays(year, month);
+    }
     let dateCol = [];
     dateCol[0] = mapMax(min.$y, max.$y).map((value) => ({ label: value + "\u5E74", value }));
     if (lifa.value == "\u516C") {
@@ -106,12 +125,21 @@ const useDateTime = ({ props, emit }) => {
   function onDateChange(evt) {
     onChange(evt.detail);
   }
+  const { open, close } = uni_modules_kvQui_components_qPicker_usePicker.usePicker({ props, emit });
+  function confirm() {
+    emit("update:modelValue", dateVal.value.text);
+    emit("confirm", dateVal);
+    close();
+  }
   return {
     colName: ["\u5E74", "\u6708", "\u65E5", "\u65F6", "\u5206", "\u79D2"],
     options,
     lifa,
     innerValue,
     dateVal,
+    open,
+    close,
+    confirm,
     onDateReady,
     onLifaChange,
     onDateChange

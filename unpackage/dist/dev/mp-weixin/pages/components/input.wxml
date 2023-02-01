@@ -1,9 +1,9 @@
-<lanmu wx:if="{{g}}" u-s="{{['d']}}" u-i="19677af6-0" bind:__l="__l" u-p="{{g}}"><view><q-input wx:if="{{b}}" u-i="19677af6-1,19677af6-0" bind:__l="__l" bindupdateModelValue="{{a}}" u-p="{{b}}"/></view><view><q-input wx:if="{{d}}" u-i="19677af6-2,19677af6-0" bind:__l="__l" bindupdateModelValue="{{c}}" u-p="{{d}}"/></view><view><q-input wx:if="{{f}}" u-i="19677af6-3,19677af6-0" bind:__l="__l" bindupdateModelValue="{{e}}" u-p="{{f}}"/></view></lanmu><lanmu wx:if="{{j}}" u-s="{{['d']}}" u-i="19677af6-4" bind:__l="__l" u-p="{{j}}"><q-input wx:if="{{i}}" u-i="19677af6-5,19677af6-4" bind:__l="__l" bindupdateModelValue="{{h}}" u-p="{{i}}"></q-input></lanmu><lanmu wx:if="{{k}}" u-s="{{['d']}}" u-i="19677af6-6" bind:__l="__l" u-p="{{k}}"><view>  focus -> autofocus
-  disabled -> disable
-  
-  支持原生参数：
-  confirm-type
-  confirm-hold
-  adjust-position
-  auto-blur
-</view></lanmu>
+<q-page u-s="{{['d']}}" u-i="19677af6-0" bind:__l="__l"><lanmu wx:if="{{g}}" u-s="{{['d']}}" u-i="19677af6-1,19677af6-0" bind:__l="__l" u-p="{{g}}"><view><q-input wx:if="{{b}}" u-i="19677af6-2,19677af6-1" bind:__l="__l" bindupdateModelValue="{{a}}" u-p="{{b}}"/></view><view><q-input wx:if="{{d}}" u-i="19677af6-3,19677af6-1" bind:__l="__l" bindupdateModelValue="{{c}}" u-p="{{d}}"/></view><view><q-input wx:if="{{f}}" u-i="19677af6-4,19677af6-1" bind:__l="__l" bindupdateModelValue="{{e}}" u-p="{{f}}"/></view></lanmu><lanmu wx:if="{{j}}" u-s="{{['d']}}" u-i="19677af6-5,19677af6-0" bind:__l="__l" u-p="{{j}}"><q-input wx:if="{{i}}" u-i="19677af6-6,19677af6-5" bind:__l="__l" bindupdateModelValue="{{h}}" u-p="{{i}}"></q-input></lanmu><lanmu wx:if="{{y}}" u-s="{{['d']}}" u-i="19677af6-7,19677af6-0" bind:__l="__l" u-p="{{y}}"><view class="q-gutter-y-sm"><view><q-field wx:if="{{m}}" u-s="{{['prepend','control']}}" u-i="19677af6-8,19677af6-7" bind:__l="__l" u-p="{{m}}"><q-icon u-i="19677af6-9,19677af6-8" bind:__l="__l" u-p="{{k}}" slot="prepend"/><view class="self-center full-width no-outline" tabindex="0" slot="control">{{l}}</view></q-field></view><view><q-field wx:if="{{p}}" u-s="{{['append','control']}}" u-i="19677af6-10,19677af6-7" bind:__l="__l" u-p="{{p}}"><q-icon u-i="19677af6-11,19677af6-10" bind:__l="__l" u-p="{{n}}" slot="append"/><view class="self-center full-width no-outline" tabindex="0" slot="control">{{o}}</view></q-field></view><view><q-field wx:if="{{t}}" u-s="{{['prepend','control','append','hint']}}" u-i="19677af6-12,19677af6-7" bind:__l="__l" u-p="{{t}}"><q-icon u-i="19677af6-13,19677af6-12" bind:__l="__l" u-p="{{q}}" slot="prepend"/><view class="self-center full-width no-outline" tabindex="0" slot="control">{{r}}</view><q-icon class="cursor-pointer" u-i="19677af6-14,19677af6-12" bind:__l="__l" u-p="{{s}}" slot="append"/><view slot="hint"> Field hint </view></q-field></view><view><q-field wx:if="{{x}}" u-s="{{['prepend','control']}}" u-i="19677af6-15,19677af6-7" bind:__l="__l" u-p="{{x}}"><q-icon u-i="19677af6-16,19677af6-15" bind:__l="__l" u-p="{{v}}" slot="prepend"/><view class="self-center full-width no-outline" tabindex="0" slot="control">{{w}}</view></q-field></view></view></lanmu><lanmu wx:if="{{z}}" u-s="{{['d']}}" u-i="19677af6-17,19677af6-0" bind:__l="__l" u-p="{{z}}"><view>		  focus -> autofocus
+		  disabled -> disable
+		  
+		  支持原生参数：
+		  confirm-type
+		  confirm-hold
+		  adjust-position
+		  auto-blur
+		</view></lanmu></q-page>

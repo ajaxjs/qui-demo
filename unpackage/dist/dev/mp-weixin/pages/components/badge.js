@@ -7,14 +7,16 @@ if (!Array) {
   const _component_Lanmu = common_vendor.resolveComponent("Lanmu");
   const _easycom_q_separator2 = common_vendor.resolveComponent("q-separator");
   const _easycom_q_btn2 = common_vendor.resolveComponent("q-btn");
-  (_easycom_q_badge2 + _easycom_q_icon2 + _component_Lanmu + _easycom_q_separator2 + _easycom_q_btn2)();
+  const _easycom_q_page2 = common_vendor.resolveComponent("q-page");
+  (_easycom_q_badge2 + _easycom_q_icon2 + _component_Lanmu + _easycom_q_separator2 + _easycom_q_btn2 + _easycom_q_page2)();
 }
 const _easycom_q_badge = () => "../../uni_modules/kv-qui/components/q-badge/q-badge.js";
 const _easycom_q_icon = () => "../../uni_modules/kv-qui/components/q-icon/q-icon.js";
 const _easycom_q_separator = () => "../../uni_modules/kv-qui/components/q-separator/q-separator.js";
 const _easycom_q_btn = () => "../../uni_modules/kv-qui/components/q-btn/q-btn.js";
+const _easycom_q_page = () => "../../uni_modules/kv-qui/components/q-page/q-page.js";
 if (!Math) {
-  (_easycom_q_badge + _easycom_q_icon + _easycom_q_separator + _easycom_q_btn)();
+  (_easycom_q_badge + _easycom_q_icon + _easycom_q_separator + _easycom_q_btn + _easycom_q_page)();
 }
 function _sfc_render(_ctx, _cache) {
   return {

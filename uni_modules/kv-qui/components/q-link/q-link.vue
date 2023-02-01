@@ -1,5 +1,5 @@
 <template>
-	<view class="q-link">
+	<view class="q-link" :class="color?'text-'+color:''">
 		<navigator v-if="to"
 			:url="to"
 			:open-type="getOpenType(this.target)"
@@ -25,6 +25,7 @@
 		
 		props: {
 			...useLinkProps,
+			color: String
 		},
 		
 		setup(props){

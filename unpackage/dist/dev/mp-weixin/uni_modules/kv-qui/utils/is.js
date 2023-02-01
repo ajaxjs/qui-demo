@@ -98,18 +98,32 @@ function isDate(v) {
 function isRegexp(v) {
   return Object.prototype.toString.call(v) === "[object RegExp]";
 }
+function isFunction(v) {
+  return Object.prototype.toString.call(v) === "[object Function]";
+}
 function isNumber(v) {
   return typeof v === "number" && isFinite(v);
+}
+function isBoolean(v) {
+  return typeof v === "boolean";
+}
+function isJson(obj) {
+  return typeof obj === "object" && Object.prototype.toString.call(obj).toLowerCase() === "[object object]" && !obj.length;
 }
 const is = {
   deepEqual: isDeepEqual,
   object: isObject,
   date: isDate,
   regexp: isRegexp,
-  number: isNumber
+  number: isNumber,
+  boolean: isBoolean,
+  json: isJson
 };
 exports.is = is;
+exports.isBoolean = isBoolean;
 exports.isDate = isDate;
 exports.isDeepEqual = isDeepEqual;
+exports.isFunction = isFunction;
 exports.isNumber = isNumber;
+exports.isObject = isObject;
 exports.isRegexp = isRegexp;

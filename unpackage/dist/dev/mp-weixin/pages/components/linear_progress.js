@@ -16,13 +16,15 @@ if (!Array) {
   const _easycom_q_linear_progress2 = common_vendor.resolveComponent("q-linear-progress");
   const _easycom_q_separator2 = common_vendor.resolveComponent("q-separator");
   const _component_Lanmu = common_vendor.resolveComponent("Lanmu");
-  (_easycom_q_btn2 + _easycom_q_linear_progress2 + _easycom_q_separator2 + _component_Lanmu)();
+  const _easycom_q_page2 = common_vendor.resolveComponent("q-page");
+  (_easycom_q_btn2 + _easycom_q_linear_progress2 + _easycom_q_separator2 + _component_Lanmu + _easycom_q_page2)();
 }
 const _easycom_q_btn = () => "../../uni_modules/kv-qui/components/q-btn/q-btn.js";
 const _easycom_q_linear_progress = () => "../../uni_modules/kv-qui/components/q-linear-progress/q-linear-progress.js";
 const _easycom_q_separator = () => "../../uni_modules/kv-qui/components/q-separator/q-separator.js";
+const _easycom_q_page = () => "../../uni_modules/kv-qui/components/q-page/q-page.js";
 if (!Math) {
-  (_easycom_q_btn + _easycom_q_linear_progress + _easycom_q_separator)();
+  (_easycom_q_btn + _easycom_q_linear_progress + _easycom_q_separator + _easycom_q_page)();
 }
 function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   return {
@@ -107,7 +109,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
       return {
         a: size,
         b: common_vendor.o($setup.randomize, size),
-        c: "3b0b5282-18-" + i0 + ",3b0b5282-12",
+        c: "3b0b5282-19-" + i0 + ",3b0b5282-13",
         d: common_vendor.p({
           size,
           value: $setup.progress,

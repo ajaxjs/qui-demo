@@ -10,8 +10,8 @@
     "q-item-section": "../../uni_modules/kv-qui/components/q-item-section/q-item-section",
     "q-item": "../../uni_modules/kv-qui/components/q-item/q-item",
     "q-list": "../../uni_modules/kv-qui/components/q-list/q-list",
-    "q-menu": "../../uni_modules/kv-qui/components/q-menu/q-menu",
     "q-avatar": "../../uni_modules/kv-qui/components/q-avatar/q-avatar",
-    "q-item-label": "../../uni_modules/kv-qui/components/q-item-label/q-item-label"
+    "q-item-label": "../../uni_modules/kv-qui/components/q-item-label/q-item-label",
+    "q-page": "../../uni_modules/kv-qui/components/q-page/q-page"
   }
 }

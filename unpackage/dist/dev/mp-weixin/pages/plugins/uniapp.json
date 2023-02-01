@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "Uniapp 封装",
+  "usingComponents": {
+    "q-btn": "../../uni_modules/kv-qui/components/q-btn/q-btn",
+    "q-page": "../../uni_modules/kv-qui/components/q-page/q-page"
+  }
+}

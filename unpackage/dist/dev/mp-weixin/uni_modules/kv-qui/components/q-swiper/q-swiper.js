@@ -36,9 +36,19 @@ const _sfc_main = {
       emitEvent("click", evt);
     };
     const emitEvent = (name, evt) => emit(name, evt);
+    const titleFmt = (text, key) => {
+      if (uni_modules_kvQui_utils_is.isObject(text)) {
+        const classes = ["absolute-" + (text.position || "bottom"), text.class];
+        text.class = classes;
+      } else {
+        text = { text, class: "absolute-bottom" };
+      }
+      return text[key];
+    };
     return {
       current,
       items,
+      titleFmt,
       onClick,
       onChange,
       emitEvent
@@ -56,18 +66,23 @@ if (!Math) {
 function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   return {
     a: common_vendor.f($setup.items, (vo, i, i0) => {
-      return common_vendor.e($props.options ? {
-        a: "cb3390dc-0-" + i0,
-        b: common_vendor.p({
+      return common_vendor.e($props.options ? common_vendor.e({
+        a: vo.title
+      }, vo.title ? {
+        b: common_vendor.t($setup.titleFmt(vo.title, "text")),
+        c: common_vendor.n($setup.titleFmt(vo.title, "class"))
+      } : {}, {
+        d: "cb3390dc-0-" + i0,
+        e: common_vendor.p({
           src: vo.src,
           className: "absolute-full",
           fit: true
         })
-      } : {
-        c: common_vendor.d(vo)
+      }) : {
+        f: common_vendor.d(vo)
       }, {
-        d: i,
-        e: common_vendor.o(($event) => $setup.onClick($event, i), i)
+        g: i,
+        h: common_vendor.o(($event) => $setup.onClick($event, i), i)
       });
     }),
     b: $props.options,

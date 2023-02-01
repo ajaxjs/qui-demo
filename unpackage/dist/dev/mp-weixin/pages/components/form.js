@@ -36,7 +36,8 @@ if (!Array) {
   const _easycom_q_datetime2 = common_vendor.resolveComponent("q-datetime");
   const _easycom_q_field2 = common_vendor.resolveComponent("q-field");
   const _easycom_q_radio2 = common_vendor.resolveComponent("q-radio");
-  (_easycom_q_input2 + _easycom_q_checkbox2 + _easycom_q_btn2 + _easycom_q_form2 + _component_Lanmu + _easycom_q_datetime2 + _easycom_q_field2 + _easycom_q_radio2)();
+  const _easycom_q_page2 = common_vendor.resolveComponent("q-page");
+  (_easycom_q_input2 + _easycom_q_checkbox2 + _easycom_q_btn2 + _easycom_q_form2 + _component_Lanmu + _easycom_q_datetime2 + _easycom_q_field2 + _easycom_q_radio2 + _easycom_q_page2)();
 }
 const _easycom_q_input = () => "../../uni_modules/kv-qui/components/q-input/q-input.js";
 const _easycom_q_checkbox = () => "../../uni_modules/kv-qui/components/q-checkbox/q-checkbox.js";
@@ -45,8 +46,9 @@ const _easycom_q_form = () => "../../uni_modules/kv-qui/components/q-form/q-form
 const _easycom_q_datetime = () => "../../uni_modules/kv-qui/components/q-datetime/q-datetime.js";
 const _easycom_q_field = () => "../../uni_modules/kv-qui/components/q-field/q-field.js";
 const _easycom_q_radio = () => "../../uni_modules/kv-qui/components/q-radio/q-radio.js";
+const _easycom_q_page = () => "../../uni_modules/kv-qui/components/q-page/q-page.js";
 if (!Math) {
-  (_easycom_q_input + _easycom_q_checkbox + _easycom_q_btn + _easycom_q_form + _easycom_q_datetime + _easycom_q_field + _easycom_q_radio)();
+  (_easycom_q_input + _easycom_q_checkbox + _easycom_q_btn + _easycom_q_form + _easycom_q_datetime + _easycom_q_field + _easycom_q_radio + _easycom_q_page)();
 }
 function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   return {

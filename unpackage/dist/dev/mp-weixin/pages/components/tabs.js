@@ -5,13 +5,15 @@ if (!Array) {
   const _easycom_q_tabs2 = common_vendor.resolveComponent("q-tabs");
   const _component_Lanmu = common_vendor.resolveComponent("Lanmu");
   const _easycom_q_badge2 = common_vendor.resolveComponent("q-badge");
-  (_easycom_q_tab2 + _easycom_q_tabs2 + _component_Lanmu + _easycom_q_badge2)();
+  const _easycom_q_page2 = common_vendor.resolveComponent("q-page");
+  (_easycom_q_tab2 + _easycom_q_tabs2 + _component_Lanmu + _easycom_q_badge2 + _easycom_q_page2)();
 }
 const _easycom_q_tab = () => "../../uni_modules/kv-qui/components/q-tab/q-tab.js";
 const _easycom_q_tabs = () => "../../uni_modules/kv-qui/components/q-tabs/q-tabs.js";
 const _easycom_q_badge = () => "../../uni_modules/kv-qui/components/q-badge/q-badge.js";
+const _easycom_q_page = () => "../../uni_modules/kv-qui/components/q-page/q-page.js";
 if (!Math) {
-  (_easycom_q_tab + _easycom_q_tabs + _easycom_q_badge)();
+  (_easycom_q_tab + _easycom_q_tabs + _easycom_q_badge + _easycom_q_page)();
 }
 const _sfc_main = {
   __name: "tabs",

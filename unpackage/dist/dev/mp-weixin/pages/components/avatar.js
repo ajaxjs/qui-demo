@@ -4,11 +4,13 @@ const _sfc_main = {};
 if (!Array) {
   const _easycom_q_avatar2 = common_vendor.resolveComponent("q-avatar");
   const _component_Lanmu = common_vendor.resolveComponent("Lanmu");
-  (_easycom_q_avatar2 + _component_Lanmu)();
+  const _easycom_q_page2 = common_vendor.resolveComponent("q-page");
+  (_easycom_q_avatar2 + _component_Lanmu + _easycom_q_page2)();
 }
 const _easycom_q_avatar = () => "../../uni_modules/kv-qui/components/q-avatar/q-avatar.js";
+const _easycom_q_page = () => "../../uni_modules/kv-qui/components/q-page/q-page.js";
 if (!Math) {
-  _easycom_q_avatar();
+  (_easycom_q_avatar + _easycom_q_page)();
 }
 function _sfc_render(_ctx, _cache) {
   return {

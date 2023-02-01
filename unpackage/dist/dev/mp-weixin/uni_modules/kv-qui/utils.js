@@ -3,6 +3,7 @@ const uni_modules_kvQui_utils_clone = require("./utils/clone.js");
 const uni_modules_kvQui_utils_format = require("./utils/format.js");
 const uni_modules_kvQui_utils_uid = require("./utils/uid.js");
 const uni_modules_kvQui_utils_is = require("./utils/is.js");
+const uni_modules_kvQui_utils_each = require("./utils/each.js");
 const pages = [
   {
     path: "pages/index/index",
@@ -30,6 +31,13 @@ const pages = [
   },
   {
     path: "pages/layout/layout",
+    style: {
+      navigationBarTitleText: "Layout",
+      navigationStyle: "custom"
+    }
+  },
+  {
+    path: "pages/layout/layout2",
     style: {
       navigationBarTitleText: "Layout"
     }
@@ -115,7 +123,7 @@ const pages = [
   {
     path: "pages/components/date_picker",
     style: {
-      navigationBarTitleText: "DatePicker"
+      navigationBarTitleText: "Date & Picker"
     }
   },
   {
@@ -128,6 +136,12 @@ const pages = [
     path: "pages/components/swiper",
     style: {
       navigationBarTitleText: "Swiper"
+    }
+  },
+  {
+    path: "pages/plugins/uniapp",
+    style: {
+      navigationBarTitleText: "Uniapp \u5C01\u88C5"
     }
   }
 ];
@@ -142,6 +156,7 @@ const utils = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.definePropert
   clone: uni_modules_kvQui_utils_clone.cloneDeep,
   format: uni_modules_kvQui_utils_format.format,
   uid: uni_modules_kvQui_utils_uid.uid,
-  is: uni_modules_kvQui_utils_is.is
+  is: uni_modules_kvQui_utils_is.is,
+  each: uni_modules_kvQui_utils_each.each
 }, Symbol.toStringTag, { value: "Module" }));
 exports.utils = utils;

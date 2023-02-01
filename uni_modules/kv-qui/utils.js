@@ -2,6 +2,7 @@ import clone from './utils/clone.js'
 import format from './utils/format.js'
 import uid from './utils/uid.js'
 import is from './utils/is.js'
+import each from './utils/each.js'
 import {pages} from '@/pages.json'
 
 // 读取当前路由信息，name 读取当前页面style[name]
@@ -17,4 +18,5 @@ export {
 	format,
 	uid,
 	is,
+	each,
 }

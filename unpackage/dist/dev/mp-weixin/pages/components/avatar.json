@@ -1,6 +1,7 @@
 {
   "navigationBarTitleText": "Avatar",
   "usingComponents": {
-    "q-avatar": "../../uni_modules/kv-qui/components/q-avatar/q-avatar"
+    "q-avatar": "../../uni_modules/kv-qui/components/q-avatar/q-avatar",
+    "q-page": "../../uni_modules/kv-qui/components/q-page/q-page"
   }
 }

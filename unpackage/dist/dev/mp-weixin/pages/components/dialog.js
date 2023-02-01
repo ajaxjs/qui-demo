@@ -39,18 +39,20 @@ if (!Array) {
   const _easycom_q_btn2 = common_vendor.resolveComponent("q-btn");
   const _component_Lanmu = common_vendor.resolveComponent("Lanmu");
   const _easycom_q_separator2 = common_vendor.resolveComponent("q-separator");
+  const _easycom_q_page2 = common_vendor.resolveComponent("q-page");
   const _easycom_q_card_section2 = common_vendor.resolveComponent("q-card-section");
   const _easycom_q_card2 = common_vendor.resolveComponent("q-card");
   const _easycom_q_dialog2 = common_vendor.resolveComponent("q-dialog");
-  (_easycom_q_btn2 + _component_Lanmu + _easycom_q_separator2 + _easycom_q_card_section2 + _easycom_q_card2 + _easycom_q_dialog2)();
+  (_easycom_q_btn2 + _component_Lanmu + _easycom_q_separator2 + _easycom_q_page2 + _easycom_q_card_section2 + _easycom_q_card2 + _easycom_q_dialog2)();
 }
 const _easycom_q_btn = () => "../../uni_modules/kv-qui/components/q-btn/q-btn.js";
 const _easycom_q_separator = () => "../../uni_modules/kv-qui/components/q-separator/q-separator.js";
+const _easycom_q_page = () => "../../uni_modules/kv-qui/components/q-page/q-page.js";
 const _easycom_q_card_section = () => "../../uni_modules/kv-qui/components/q-card-section/q-card-section.js";
 const _easycom_q_card = () => "../../uni_modules/kv-qui/components/q-card/q-card.js";
 const _easycom_q_dialog = () => "../../uni_modules/kv-qui/components/q-dialog/q-dialog.js";
 if (!Math) {
-  (_easycom_q_btn + _easycom_q_separator + _easycom_q_card_section + _easycom_q_card + _easycom_q_dialog)();
+  (_easycom_q_btn + _easycom_q_separator + _easycom_q_page + _easycom_q_card_section + _easycom_q_card + _easycom_q_dialog)();
 }
 function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   return {
@@ -199,7 +201,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
       color: "primary",
       label: "full-height"
     }),
-    Q: common_vendor.sr("dialog", "58b179c6-17"),
+    Q: common_vendor.sr("dialog", "58b179c6-18"),
     R: common_vendor.o($options.onShow),
     S: common_vendor.o($options.onHide),
     T: common_vendor.o(($event) => $data.show = $event),

@@ -130,6 +130,10 @@ export function isRegexp (v) {
   return Object.prototype.toString.call(v) === '[object RegExp]'
 }
 
+export function isFunction(v){
+	return Object.prototype.toString.call(v) === '[object Function]'
+}
+
 export function isNumber (v) {
   return typeof v === 'number' && isFinite(v)
 }

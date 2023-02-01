@@ -20,10 +20,11 @@ if (!Array) {
   const _easycom_q_item_section2 = common_vendor.resolveComponent("q-item-section");
   const _easycom_q_item2 = common_vendor.resolveComponent("q-item");
   const _easycom_q_list2 = common_vendor.resolveComponent("q-list");
-  const _easycom_q_menu2 = common_vendor.resolveComponent("q-menu");
+  const _component_q_menu = common_vendor.resolveComponent("q-menu");
   const _easycom_q_avatar2 = common_vendor.resolveComponent("q-avatar");
   const _easycom_q_item_label2 = common_vendor.resolveComponent("q-item-label");
-  (_easycom_q_card_section2 + _easycom_q_card2 + _easycom_q_separator2 + _component_Lanmu + _easycom_q_btn2 + _easycom_q_card_actions2 + _easycom_q_img2 + _easycom_q_item_section2 + _easycom_q_item2 + _easycom_q_list2 + _easycom_q_menu2 + _easycom_q_avatar2 + _easycom_q_item_label2)();
+  const _easycom_q_page2 = common_vendor.resolveComponent("q-page");
+  (_easycom_q_card_section2 + _easycom_q_card2 + _easycom_q_separator2 + _component_Lanmu + _easycom_q_btn2 + _easycom_q_card_actions2 + _easycom_q_img2 + _easycom_q_item_section2 + _easycom_q_item2 + _easycom_q_list2 + _component_q_menu + _easycom_q_avatar2 + _easycom_q_item_label2 + _easycom_q_page2)();
 }
 const _easycom_q_card_section = () => "../../uni_modules/kv-qui/components/q-card-section/q-card-section.js";
 const _easycom_q_card = () => "../../uni_modules/kv-qui/components/q-card/q-card.js";
@@ -34,11 +35,11 @@ const _easycom_q_img = () => "../../uni_modules/kv-qui/components/q-img/q-img.js
 const _easycom_q_item_section = () => "../../uni_modules/kv-qui/components/q-item-section/q-item-section.js";
 const _easycom_q_item = () => "../../uni_modules/kv-qui/components/q-item/q-item.js";
 const _easycom_q_list = () => "../../uni_modules/kv-qui/components/q-list/q-list.js";
-const _easycom_q_menu = () => "../../uni_modules/kv-qui/components/q-menu/q-menu.js";
 const _easycom_q_avatar = () => "../../uni_modules/kv-qui/components/q-avatar/q-avatar.js";
 const _easycom_q_item_label = () => "../../uni_modules/kv-qui/components/q-item-label/q-item-label.js";
+const _easycom_q_page = () => "../../uni_modules/kv-qui/components/q-page/q-page.js";
 if (!Math) {
-  (_easycom_q_card_section + _easycom_q_card + _easycom_q_separator + _easycom_q_btn + _easycom_q_card_actions + _easycom_q_img + _easycom_q_item_section + _easycom_q_item + _easycom_q_list + _easycom_q_menu + _easycom_q_avatar + _easycom_q_item_label)();
+  (_easycom_q_card_section + _easycom_q_card + _easycom_q_separator + _easycom_q_btn + _easycom_q_card_actions + _easycom_q_img + _easycom_q_item_section + _easycom_q_item + _easycom_q_list + _easycom_q_avatar + _easycom_q_item_label + _easycom_q_page)();
 }
 function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   return {

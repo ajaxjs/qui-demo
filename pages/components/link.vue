@@ -4,7 +4,7 @@
 			<q-link to="/pages/components/card" label="内部连接" /> -
 			<q-link href="https://cn.vuejs.org/" label="外部连接" /> -
 			<q-link mp="wxa91ff29be8dbb11c://pages/components/btn?id=12" label="Wechat Mini Program" />
-			<HiCode title="示例代码" :code="Qlink"></HiCode>
+			<HiCode hide title="示例代码" :code="Qlink"></HiCode>
 		</Lanmu>
 		<Lanmu title="JS方法跳转">
 			<view class="q-gutter-md">
@@ -21,7 +21,7 @@
 					小程序跳转
 				</view>
 			</view>
-			<HiCode title="示例代码" :code="code2"></HiCode>
+			<HiCode hide title="示例代码" :code="code2"></HiCode>
 		</Lanmu>
 	</q-page>
 </template>

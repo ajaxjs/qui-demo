@@ -5,6 +5,7 @@
     "pages/layout/grid_row",
     "pages/layout/gutter",
     "pages/layout/layout",
+    "pages/layout/layout2",
     "pages/components/icon",
     "pages/components/avatar",
     "pages/components/img",
@@ -20,7 +21,8 @@
     "pages/components/dialog",
     "pages/components/date_picker",
     "pages/components/tabs",
-    "pages/components/swiper"
+    "pages/components/swiper",
+    "pages/plugins/uniapp"
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -29,6 +31,7 @@
     "backgroundColor": "#F8F8F8"
   },
   "usingComponents": {
-    "lanmu": "/components/Lanmu"
+    "lanmu": "/components/Lanmu",
+    "hi-code": "/components/hi-code/index"
   }
 }

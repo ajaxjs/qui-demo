@@ -29,7 +29,7 @@
 					<q-checkbox class="uni" v-model="conf.indicatorDots" label="显示DOT" />
 				</view>
 			</view>
-			<HiCode title="示例代码" :code="code1"></HiCode>
+			<HiCode hide title="示例代码" :code="code1"></HiCode>
 		</Lanmu>
 		<!-- 支持数组渲染 -->
 		<Lanmu title="Array Swiper">
@@ -39,7 +39,7 @@
 				数据格式：
 				[{src:'图片地址',title:'图片标题(可选)',to:'连接(可选)'}]
 			</view>
-			<HiCode :code="code2"></HiCode>
+			<HiCode hide :code="code2"></HiCode>
 		</Lanmu>
 	</q-page>
 </template>

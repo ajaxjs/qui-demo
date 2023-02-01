@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "Layout",
+  "usingComponents": {
+    "q-footer": "../../uni_modules/kv-qui/components/q-footer/q-footer",
+    "q-page": "../../uni_modules/kv-qui/components/q-page/q-page"
+  }
+}

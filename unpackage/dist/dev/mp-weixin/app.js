@@ -16,8 +16,12 @@ require("./uni_modules/kv-qui/utils/clone.js");
 require("./uni_modules/kv-qui/utils/format.js");
 require("./uni_modules/kv-qui/utils/uid.js");
 require("./uni_modules/kv-qui/utils/is.js");
+require("./uni_modules/kv-qui/utils/each.js");
 require("./uni_modules/kv-qui/utils/uniapp/index.js");
 require("./uni_modules/kv-qui/utils/uniapp/page.js");
+require("./uni_modules/kv-qui/utils/uniapp/alert.js");
+require("./uni_modules/kv-qui/utils/uniapp/toast.js");
+require("./uni_modules/kv-qui/utils/uniapp/action-sheet.js");
 require("./uni_modules/kv-qui/utils/uniapp/open-url.js");
 require("./uni_modules/kv-qui/plugins/LocalStorage.js");
 require("./uni_modules/kv-qui/utils/private/web-storage.js");
@@ -27,6 +31,7 @@ if (!Math) {
   "./pages/layout/grid_row.js";
   "./pages/layout/gutter.js";
   "./pages/layout/layout.js";
+  "./pages/layout/layout2.js";
   "./pages/components/icon.js";
   "./pages/components/avatar.js";
   "./pages/components/img.js";
@@ -43,6 +48,7 @@ if (!Math) {
   "./pages/components/date_picker.js";
   "./pages/components/tabs.js";
   "./pages/components/swiper.js";
+  "./pages/plugins/uniapp.js";
 }
 const _sfc_main = {
   onLaunch: function() {
@@ -57,10 +63,12 @@ const _sfc_main = {
 };
 const App = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__file", "E:/AppProject/qui-demo/App.vue"]]);
 const Lanmu = () => "./components/Lanmu.js";
+const HiCode = () => "./components/hi-code/index.js";
 function createApp() {
   const app = common_vendor.createSSRApp(App);
   app.use(uni_modules_kvQui_index.Qui, qui_config.QuiConfig);
   app.component("Lanmu", Lanmu);
+  app.component("HiCode", HiCode);
   return {
     app
   };

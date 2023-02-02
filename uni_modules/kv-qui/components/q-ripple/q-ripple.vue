@@ -21,7 +21,7 @@
 		methods: {
 			buildStyle(evt){
 				//const elm = this.$refs
-				const {offsetTop,offsetLeft} = evt.target
+				const {offsetTop,offsetLeft} = evt.currentTarget
 				const {pageX,pageY} = evt.touches[0];
 				return {
 					left: (pageX-offsetLeft)+'px',

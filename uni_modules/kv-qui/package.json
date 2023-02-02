@@ -2,13 +2,13 @@
   "id": "kv-qui",
   "displayName": "kv-qui 基于Vue3.0 全平台ui组件库",
   "version": "1.0.0",
-  "description": "QUI 基于Quasar的重构，Vue3.0 全平台ui组件库。",
+  "description": "QUI 基于Quasar的重构，全面兼容uni-app及小程序，Vue3.0 全平台ui组件库。",
   "keywords": [
     "kv-qui,Quasar,ui"
 ],
-  "repository": "",
+  "repository": "https://github.com/ajaxjs/qui-demo",
   "engines": {
-    "HBuilderX": "^3.1.0"
+    "HBuilderX": "^3.6.18"
   },
   "dcloudext": {
     "type": "component-vue",

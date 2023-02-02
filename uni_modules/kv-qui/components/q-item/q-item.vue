@@ -1,6 +1,6 @@
 <template>
 	<view :class="classes" role="listitem"
-		@click="onClick"
+		@click.stop="onClick"
 		@keyup="onKeyup"
 	>
 		<slot></slot>
@@ -109,39 +109,7 @@
 					['padding' + dir]: (16 + props.insetLevel * 56) + 'px'
 				}
 			})
-			/*const rippleRef = ref()
-			function onClick(e) {
-			console.log(rootRef.value)
-				console.log('click*--',isClickable.value);
-				if (isClickable.value === true) {
-					if (blurTargetRef.value !== null) {
-						if (e.qKeyEvent !== true && document.activeElement === rootRef.value) {
-							blurTargetRef.value.focus()
-						} else if (document.activeElement === blurTargetRef.value) {
-							rootRef.value.focus()
-						}
-					}
-					//$refs.ripple.ripple(e)
-					navigateOnClick(e)
-				}
-			}*/
-
-			/*function onKeyup(e) {
-				if (isClickable.value === true && isKeyCode(e, 13) === true) {
-					stopAndPrevent(e)
-
-					// for ripple
-					e.qKeyEvent = true
-
-					// for click trigger
-					const evt = new MouseEvent('click', e)
-					evt.qKeyEvent = true
-					rootRef.value.dispatchEvent(evt)
-				}
-
-				emit('keyup', e)
-			}*/
-
+			
 			return {
 				rootRef,
 				blurTargetRef,
@@ -149,8 +117,7 @@
 				style,
 				
 				isKeyCode,
-				//onClick,
-				//onKeyup,
+				isClickable,
 				
 				hasLink,
 				linkClass,

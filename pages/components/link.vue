@@ -14,7 +14,7 @@
 				<view @click="$uni.openUrl" data-to="/pages/components/btn?id=12">
 					JS跳转连接
 				</view>
-				<view @click="$uni.openUrl" data-root="/pages/index/broswer" data-url="https://vip.qixingtang.com/show-513.html">
+				<view @click="$uni.openUrl" data-href="https://mp.weixin.qq.com">
 					URL跳转连接
 				</view>
 				<view @click="$uni.openUrl" data-mp="wxa91ff29be8dbb11c://pages/components/btn?id=12#test">

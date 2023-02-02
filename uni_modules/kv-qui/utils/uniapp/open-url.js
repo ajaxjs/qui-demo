@@ -1,3 +1,4 @@
+import quiConf from '@/qui.config.js'
 // URL解析
 const field = {
 	'Username': 4,
@@ -163,6 +164,9 @@ export function openUrl(evt) {
 		// 内部网址
 		url = to
 	}else if(href){
+		// 读取webView路径
+		root = root || quiConf.config.webViewPath
+		if(!root) return console.error('配置文件的 webViewPath 未设置！')
 		// 远程网址，加入web-view路径
 		url = root+'?url='+href
 	}else{

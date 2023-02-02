@@ -13,12 +13,6 @@ export default {
 	openUrl,
 	parseUrl,
 	install({ parentApp, $q }){
-		// 导航（设置webViewPath）
-		this.openUrl = (evt)=>{
-			const {webViewPath} = $q.config
-			evt = formatParam(evt, {root: webViewPath})
-			openUrl(evt)
-		}
 		parentApp.config.globalProperties.$uni = this
 	}
 }

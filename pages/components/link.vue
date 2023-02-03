@@ -27,6 +27,8 @@
 </template>
 
 <script setup>
+import {getCurrentInstance} from 'vue'
+const { proxy: { $q } } = getCurrentInstance()
 
 const Qlink = `<q-link to="/pages/components/card" label="内部连接" /> -
 <q-link href="https://cn.vuejs.org/" label="外部连接" /> -

@@ -90,7 +90,9 @@
 	</template>
 </q-swiper>`
 	})
-	const code2 = [{title:'template',code:`<q-swiper v-model="tab1" :options="options" indicatorDots @click="onClick"></q-swiper>`},{
+	const code2 = [
+			{title:'template',code:`<q-swiper v-model="tab1" :options="options" indicatorDots @click="onClick"></q-swiper>`},
+		{
 		title:'Script',
 		code: `export default {
   date(){

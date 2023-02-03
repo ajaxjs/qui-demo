@@ -37,7 +37,7 @@ const install = (app, uiOpts = {}) => {
 		app.config.globalProperties.$q = $q
 		
 		app.provide(quasarKey, $q)
-		console.log('--', $q);
+		
 		const pluginOpts = {
 			parentApp: app,
 			$q,

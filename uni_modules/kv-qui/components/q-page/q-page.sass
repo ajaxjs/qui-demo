@@ -13,13 +13,26 @@ page
     flex: 10000 1 0%
   &-pushed .q-header
     top: 0 !important
+  .has-head
+    .q-page-loading-bar
+      top: var(--header-height)
+  &-loading-bar
+    position: fixed !important
+    top: var(--header-height)
+    /* #ifdef H5 */
+    /*#endif*/
+    left: 0
+    right: 0
+    z-index: $z-marginals
 
 q-page, .q-page
   min-height: calc(100vh - var(--window-top))
 
 .q-header, .q-footer, .q-page, .q-page-container
   position: relative
-  width: 100vw
+
+scroll-view.q-page-container
+  max-height: var(--container-height)
 
 .q-header, .q-footer
   z-index: $z-marginals

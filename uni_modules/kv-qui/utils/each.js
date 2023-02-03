@@ -1,4 +1,5 @@
 /*
+使用方法：
 import each from '@/each.js'
 
 each(['a','b','c'],(value,key,index)=>{
@@ -9,7 +10,7 @@ each({a:'111',b:222,c:'abc'}, (value,key,index)=>{
 })
 */
 
-export default function(object, callback) {
+function each(object, callback) {
 	if (!object) return null
 	var type = (function() {
 		switch (object.constructor) {
@@ -46,3 +47,12 @@ export default function(object, callback) {
 		}
 	}
 }
+
+export function map(obj,callback){
+	let tags = typeof obj
+	let retn = tags == 'object' ? {} : (tags === 'array' ? [] : null);
+	if(retn) each(obj,(vo,key) => retn[key] = callback.call(this,vo,key))
+	return retn
+}
+
+export default each

@@ -1,29 +1,29 @@
 <template>
 	<q-page>
-		<Lanmu title="Basic">
+		<Lanmu title="Basic" content-class="q-pa-sm">
 			<div class="text-purple row q-gutter-sm" style="font-size: 2em">
-				<q-icon name="font_download" />
-				<q-icon name="warning" />
-				<q-icon name="format_size" />
-				<q-icon name="print" />
-				<q-icon name="today" />
-				<q-icon name="style" />
+				<q-icon class="uni" name="font_download" />
+				<q-icon class="uni" name="warning" />
+				<q-icon class="uni" name="format_size" />
+				<q-icon class="uni" name="print" />
+				<q-icon class="uni" name="today" />
+				<q-icon class="uni" name="style" />
 			</div>
 		</Lanmu>
-		<Lanmu title="Size & colors">
+		<Lanmu title="Size & colors" content-class="q-pa-sm">
 			<div class="q-mt-md row q-gutter-md">
-				<q-icon name="font_download" color="primary" size="32px" />
-				<q-icon name="warning" color="warning" size="4rem" />
-				<q-icon name="format_size" style="color: #ccc; font-size: 1.4em;" />
-				<q-icon name="print" color="teal" size="4.4em" />
-				<q-icon name="today" class="text-orange" size="2em" />
-				<q-icon name="style" size="3em" />
+				<q-icon class="uni" name="font_download" color="primary" size="32px" />
+				<q-icon class="uni" name="warning" color="warning" size="4rem" />
+				<q-icon class="uni" name="format_size" style="color: #ccc; font-size: 1.4em;" />
+				<q-icon class="uni" name="print" color="teal" size="4.4em" />
+				<q-icon class="uni text-orange" name="today" size="2em" />
+				<q-icon class="uni" name="style" size="3em" />
 			</div>
 		</Lanmu>
 			
-		<Lanmu title="Standard sizes">
+		<Lanmu title="Standard sizes" content-class="q-pa-sm">
 			<div class="text-purple row q-gutter-md">
-				<q-icon
+				<q-icon class="uni"
 					v-for="size in ['xs', 'sm', 'md', 'lg', 'xl']"
 					:key="size"
 					:size="size"
@@ -32,7 +32,7 @@
 			</div>
 		</Lanmu>
 		
-		<Lanmu title="Image icons">
+		<Lanmu title="Image icons" content-class="q-pa-sm">
 			<div class="q-pa-sm" v-for="(src, i) in imgIcon" :key="i">
 				<div class="ellipsis-2-lines text-blue-grey q-pa-xs bg-blue-grey-1">{{src}}</div>
 				<q-icon

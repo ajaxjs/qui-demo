@@ -1,5 +1,5 @@
 <template>
-	<q-page :push="pushSide">
+	<q-page :push="pushSide" :loadingBar="loadBar">
 		<!-- 不用container，可直接写入页面内容 -->
 
 		<!-- 使用container，自定义内容容器 -->
@@ -14,6 +14,9 @@
 							color="primary" />
 					</view>
 					<view class="">
+						<q-btn no-caps :icon="'visibility'+(loadBar?'_off':'')" :label="(loadBar?'隐藏':'显示')+' loadingBar'" color="primary" @click="loadBar = !loadBar" />
+					</view>
+					<view class="">
 						<q-checkbox v-model="isOverlay" :label="`是否为overlay（即无遮罩）-${isOverlay}`" />
 					</view>
 					<view class="">
@@ -25,7 +28,9 @@
 					<view class="">
 						当前页：{{tab}}
 					</view>
-					<q-link to="/pages/layout/layout2">内部滚动页面 &gt;</q-link>
+					<view>
+						<q-link to="/pages/layout/layout2">内部滚动页面 &gt;</q-link>
+					</view>
 				</view>
 			</scroll-view>
 		</template>
@@ -37,7 +42,8 @@
 				<view class="col row justify-center items-center">
 					自定义头部
 				</view>
-				<q-btn flat icon="menu" @click="showRightSide = !showRightSide" />
+				<view style="width: 56px" v-if="$q.platform.uniPlatform.indexOf('mp') !== 0"></view>
+				<q-btn flat icon="menu" @click="showRightSide = !showRightSide" v-else />
 			</q-header>
 		</template>
 
@@ -66,6 +72,7 @@
 		ref,
 		computed
 	} from 'vue'
+	const loadBar = ref(false)
 	const tab = ref('mails')
 	// 侧栏显示时，是否push
 	const isPush = ref(true)

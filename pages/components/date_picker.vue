@@ -1,6 +1,6 @@
 <template>
 	<q-page>
-		<Lanmu title="日期选择器">
+		<Lanmu title="选择器">
 			<view class="q-gutter-y-sm">
 				<view class="">
 					<q-btn color="blue" label="弹出选择" @click="pkShow=true" />-{{pkVals}}-

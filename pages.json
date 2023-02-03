@@ -3,7 +3,7 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText": "KV-QUI"
 			}
 		},
 		{
@@ -34,7 +34,38 @@
 		{
 			"path": "pages/layout/layout2",
 			"style": {
-				"navigationBarTitleText": "Layout"
+				"navigationBarTitleText": "Layout",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/identity/typography",
+			"style": {
+				"navigationBarTitleText": "Typography"
+			}
+		},
+		{
+			"path": "pages/identity/color",
+			"style": {
+				"navigationBarTitleText": "Color"
+			}
+		},
+		{
+			"path": "pages/identity/assist",
+			"style": {
+				"navigationBarTitleText": "Assist"
+			}
+		},
+		{
+			"path": "pages/identity/visiblity",
+			"style": {
+				"navigationBarTitleText": "Visiblity"
+			}
+		},
+		{
+			"path": "pages/identity/position",
+			"style": {
+				"navigationBarTitleText": "Position"
 			}
 		},
 		{

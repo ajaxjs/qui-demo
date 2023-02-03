@@ -9,7 +9,8 @@
 		</view>
 		<template v-for="(vo,i) in codeArr" :key="i">
 			<scroll-view scroll-x scroll-y v-if="i==cid" v-show="isShow">
-				<pre><code class="text-grey-8">{{vo.code}}<slot></slot></code></pre>
+				<textarea auto-height class="codebox text-grey-8" :value="vo.code"></textarea>
+				<!-- <pre><code class="text-grey-8">{{vo.code}}<slot></slot></code></pre> -->
 			</scroll-view>
 		</template>
 	</view>
@@ -21,7 +22,7 @@
 	export default {
 		props: {
 			title: String,
-			code: [String],
+			code: [String,Array],
 			hide: Boolean
 		},
 		setup(props){
@@ -57,7 +58,7 @@
     .tab
       border-right: #{$blue-grey-4} solid 1px
 
-  pre
+  .codebox
     padding: 5px
     min-height: 150px
 </style>

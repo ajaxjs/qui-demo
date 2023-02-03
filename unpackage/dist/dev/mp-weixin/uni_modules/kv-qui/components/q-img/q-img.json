@@ -1,6 +1,0 @@
-{
-  "component": true,
-  "usingComponents": {
-    "q-spinner": "../q-spinner/q-spinner"
-  }
-}

@@ -1,9 +1,0 @@
-{
-  "navigationBarTitleText": "linear Progress",
-  "usingComponents": {
-    "q-btn": "../../uni_modules/kv-qui/components/q-btn/q-btn",
-    "q-linear-progress": "../../uni_modules/kv-qui/components/q-linear-progress/q-linear-progress",
-    "q-separator": "../../uni_modules/kv-qui/components/q-separator/q-separator",
-    "q-page": "../../uni_modules/kv-qui/components/q-page/q-page"
-  }
-}

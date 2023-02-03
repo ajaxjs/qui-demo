@@ -1,1 +1,0 @@
-<view class="{{['q-link', k]}}"><navigator wx:if="{{a}}" url="{{c}}" open-type="{{d}}">{{b}}<slot></slot></navigator><view wx:elif="{{e}}" bindtap="{{g}}">{{f}}<slot></slot></view><view wx:elif="{{h}}" bindtap="{{j}}">{{i}}<slot></slot></view></view>

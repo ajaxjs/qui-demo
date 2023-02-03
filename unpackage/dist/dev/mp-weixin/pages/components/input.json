@@ -1,9 +1,0 @@
-{
-  "navigationBarTitleText": "Field & Input",
-  "usingComponents": {
-    "q-input": "../../uni_modules/kv-qui/components/q-input/q-input",
-    "q-icon": "../../uni_modules/kv-qui/components/q-icon/q-icon",
-    "q-field": "../../uni_modules/kv-qui/components/q-field/q-field",
-    "q-page": "../../uni_modules/kv-qui/components/q-page/q-page"
-  }
-}

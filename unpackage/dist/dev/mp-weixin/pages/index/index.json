@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "uni-app",
-  "usingComponents": {
-    "q-page": "../../uni_modules/kv-qui/components/q-page/q-page",
-    "q-drawer": "../../uni_modules/kv-qui/components/q-drawer/q-drawer"
-  }
-}

@@ -1,1 +1,0 @@
-<view class="{{e}}" role="listitem" bindtap="{{f}}" bindkeyup="{{g}}"><slot></slot><view ref="{{a}}" class="q-focus-helper" tabindex="{{b}}"></view><q-ripple wx:if="{{c}}" class="ripple r" u-r="rippleRef" u-i="79660b72-0" bind:__l="__l"></q-ripple></view>

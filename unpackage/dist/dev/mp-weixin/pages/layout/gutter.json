@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "Grid Row",
-  "usingComponents": {
-    "q-btn": "../../uni_modules/kv-qui/components/q-btn/q-btn",
-    "q-separator": "../../uni_modules/kv-qui/components/q-separator/q-separator",
-    "q-avatar": "../../uni_modules/kv-qui/components/q-avatar/q-avatar"
-  }
-}

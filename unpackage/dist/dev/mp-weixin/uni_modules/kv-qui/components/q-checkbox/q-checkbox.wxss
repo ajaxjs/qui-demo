@@ -1,9 +1,0 @@
-.q-checkbox {
-  vertical-align: middle;
-}
-.q-checkbox:last-child {
-  margin-right: auto;
-}
-.q-checkbox:not(.q-checked) .check-icon {
-  color: rgba(0, 0, 0, 0.54);
-}

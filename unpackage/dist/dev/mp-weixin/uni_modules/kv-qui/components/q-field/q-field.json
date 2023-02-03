@@ -1,8 +1,0 @@
-{
-  "component": true,
-  "usingComponents": {
-    "q-icon": "../q-icon/q-icon",
-    "q-spinner": "../q-spinner/q-spinner",
-    "q-btn": "../q-btn/q-btn"
-  }
-}

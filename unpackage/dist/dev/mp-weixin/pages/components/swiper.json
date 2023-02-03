@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "Swiper",
-  "usingComponents": {
-    "q-swiper": "../../uni_modules/kv-qui/components/q-swiper/q-swiper",
-    "q-checkbox": "../../uni_modules/kv-qui/components/q-checkbox/q-checkbox",
-    "q-page": "../../uni_modules/kv-qui/components/q-page/q-page"
-  }
-}

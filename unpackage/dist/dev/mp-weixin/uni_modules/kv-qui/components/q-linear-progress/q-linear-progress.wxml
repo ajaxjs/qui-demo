@@ -1,1 +1,0 @@
-<view role="progressbar" class="{{h}}" style="{{i}}" aria-valuemin="{{0}}" aria-valuemax="{{1}}" aria-valuenow="{{j}}"><view class="{{a}}" style="{{b}}"></view><view class="{{c}}" style="{{d}}"></view><view wx:if="{{e}}" class="{{f}}" style="{{g}}"></view></view>

@@ -1,1 +1,0 @@
-<view class="lanmu q-mx-sm q-mb-sm"><view class="title text-subtitle1 text-bold q-pa-sm">{{a}}</view><view class="{{['q-pa-sm', b]}}" style="{{c}}"><slot></slot></view></view>

@@ -1,1 +1,0 @@
-<view class="{{b}}" style="{{c}}" aria-label="{{d}}"><slot></slot> {{a}}</view>

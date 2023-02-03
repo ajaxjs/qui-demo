@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "Grid Row",
-  "usingComponents": {
-    "q-badge": "../../uni_modules/kv-qui/components/q-badge/q-badge"
-  }
-}

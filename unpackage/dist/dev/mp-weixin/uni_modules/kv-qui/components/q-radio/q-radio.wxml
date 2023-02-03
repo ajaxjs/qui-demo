@@ -1,1 +1,0 @@
-<radio-group class="{{['row', d]}}" bindchange="{{e}}"><label wx:for="{{a}}" wx:for-item="vo" wx:key="j" class="{{['q-radio', b, vo.i]}}" style="{{c}}"><q-icon wx:if="{{vo.a}}" class="check-icon" u-i="{{vo.b}}" bind:__l="__l" u-p="{{vo.c}}"/><radio hidden="{{!vo.d}}" value="{{vo.e}}" checked="{{vo.f}}" color="{{vo.g}}"/><text>{{vo.h}}</text></label></radio-group>

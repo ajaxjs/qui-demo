@@ -1,1 +1,0 @@
-<view wx:if="{{a}}" role="dialog" class="{{k}}" aria-modal="{{l}}" bindtap="{{m}}"><view wx:if="{{b}}" class="q-dialog__backdrop fixed-full" style="{{'opacity:' + c + ';' + ('transition-duration:' + d)}}" bindtouchstart="{{e}}" bindmousedown="{{f}}"></view><view class="{{[g, h]}}" tabindex="{{i}}" style="{{j}}"><slot></slot></view></view>

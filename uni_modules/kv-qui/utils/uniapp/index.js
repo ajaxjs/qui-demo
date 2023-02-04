@@ -4,7 +4,6 @@ import toast from './toast.js'
 import actions from './action-sheet.js'
 import {openUrl} from './open-url.js'
 
-
 export default {
 	page,
 	alert,

@@ -1,6 +1,8 @@
 <template>
 	<view class="q-page column" :class="[classes,className]" :style="pageStyle">
-		<q-linear-progress indeterminate v-if="loadingBar" class="q-page-loading-bar"></q-linear-progress>
+		<!-- <q-linear-progress indeterminate v-if="loadingBar" class="q-page-loading-bar"></q-linear-progress> -->
+		<LoadingBar :option="loadingBar" />
+		
 		<slot name="header"></slot>
 		<slot name="container" v-if="$slots.container"></slot>
 		<view v-else class="q-page-container">
@@ -15,9 +17,11 @@
 	import {useAttrProps} from '../../composables/private/use-attr.js'
 	import { isObject } from '../../utils/is.js'
 	import { quasarKey } from '../../utils/private/symbols.js'
+	import LoadingBar from './LoadingBar.vue'
 	
 	
 	export default {
+		components: {LoadingBar},
 		props: {
 			...useAttrProps,
 			// 侧栏宽度
@@ -29,7 +33,7 @@
 			// 设置标题
 			title: String,
 			navigationBarColor: Object,
-			loadingBar: Boolean,
+			loadingBar: [Boolean, Object, String, Number],
 		},
 		setup(props, { slots, emit }){
 			const $q = inject(quasarKey)
@@ -59,15 +63,25 @@
 			}))
 			
 			// 设置标题栏
-			if(props.title) uni.setNavigationBarTitle({title: props.title})
-			const navSet = props.navigationBarColor
-			if(navSet && Object.keys(navSet).filter(vo=>['frontColor','backgroundColor'].includes(vo))){
-				uni.setNavigationBarColor(Object.assign({complete: noop},navSet))
+			const setTitle = (title)=>{
+				if(title) uni.setNavigationBarTitle({title})
 			}
+			setTitle(props.title)
+			watch(()=>props.title, setTitle)
+			// 设置标题栏样式
+			const setNavigationBarColor = (navSet)=>{
+				console.log(navSet);
+				if(navSet && Object.keys(navSet).filter(vo=>['frontColor','backgroundColor'].includes(vo))){
+					uni.setNavigationBarColor(Object.assign({complete: noop},navSet))
+				}
+			}
+			setNavigationBarColor(props.navigationBarColor)
+			watch(()=>props.navigationBarColor, setNavigationBarColor)
 			
 			return {
 				classes,
 				pageStyle,
+				setTitle,
 			}
 		}
 	}

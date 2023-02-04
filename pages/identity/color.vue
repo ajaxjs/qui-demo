@@ -2,7 +2,7 @@
 	<q-page>
 		<Lanmu title="Brand Colors">
 			<view class="q-gutter-sm">
-				<q-btn :label="vo" :color="vo" v-for="vo in brand" :key="vo" />
+				<q-btn no-caps :label="vo" :color="vo" v-for="vo in brand" :key="vo" />
 			</view>
 			<view class="q-py-sm text-blue-grey">文字颜色(可加序号)</view>
 			<view class="row q-col-gutter-sm">
@@ -30,6 +30,6 @@
 <style lang="sass">
 .color-item
   border-radius: 4px
-  padding: 5px
+  padding: 10px
   margin-bottom: 3px
 </style>

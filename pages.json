@@ -27,8 +27,7 @@
 		{
 			"path": "pages/layout/layout",
 			"style": {
-				"navigationBarTitleText": "Layout",
-				"navigationStyle": "custom"
+				"navigationBarTitleText": "Layout"
 			}
 		},
 		{

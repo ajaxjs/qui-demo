@@ -2,32 +2,24 @@
 	<q-page>
 		<Lanmu title="With Icon">
 			<view class="q-gutter-sm">
-				<q-btn class="uni" color="primary" icon="mail" label="On Left" />
-				<q-btn class="uni" color="secondary" icon-right="mail" label="On Right" />
-				<q-btn class="uni" color="red" icon="mail" icon-right="send" label="On Left and Right" />
+				<q-btn color="primary" icon="mail" label="On Left" ripple="yellow" />
+				<q-btn color="secondary" icon-right="mail" label="On Right" />
+				<q-btn color="red" icon="mail" icon-right="send" label="On Left and Right" />
 				<br>
-				<q-btn class="uni" icon="phone" label="Stacked" stack glossy color="purple" />
-			</view>
-		</Lanmu>
-		
-		<Lanmu title="Link">
-			<view class="q-gutter-sm">
-				<q-btn class="uni" color="primary" label="内部连接" to="/pages/components/card" />
-				<q-btn class="uni" color="primary" label="URL连接" href="http://dictbag.com" />
-				<q-btn class="uni" color="primary" label="小程序连接" mp="wxa91ff29be8dbb11c://pages/components/btn?id=12" />
+				<q-btn icon="phone" label="Stacked" stack glossy color="purple" />
 			</view>
 		</Lanmu>
 		
 		<Lanmu title="Shap">
 			<view class="q-gutter-sm">
-				<q-btn class="uni" color="primary" icon="shopping_cart" />
-				<q-btn class="uni" color="secondary" icon="navigation" />
-				<q-btn class="uni" round color="amber" glossy text-color="black" icon="layers_clear" />
-				<q-btn class="uni" round color="brown-5" icon="directions" />
-				<q-btn class="uni" round color="deep-orange" icon="edit_location" />
-				<q-btn class="uni" square color="purple" glossy icon="local_grocery_store" />
-				<q-btn class="uni" square color="black" icon="my_location" />
-				<q-btn class="uni" round>
+				<q-btn color="primary" icon="shopping_cart" />
+				<q-btn color="secondary" icon="navigation" />
+				<q-btn round color="amber" glossy text-color="black" icon="layers_clear" />
+				<q-btn round color="brown-5" icon="directions" />
+				<q-btn round color="deep-orange" icon="edit_location" />
+				<q-btn square color="purple" glossy icon="local_grocery_store" />
+				<q-btn square color="black" icon="my_location" />
+				<q-btn round>
 				  <q-avatar size="42px">
 					<img src="https://cdn.quasar.dev/img/avatar2.jpg">
 				  </q-avatar>
@@ -36,24 +28,24 @@
 		</Lanmu>
 		<Lanmu title="Design">
 			<div class="q-pa-md q-gutter-sm">
-			    <q-btn class="uni" flat color="primary" label="Flat" />
-			    <q-btn class="uni" flat rounded color="primary" label="Flat Rounded" />
-			    <q-btn class="uni" flat round color="primary" icon="card_giftcard" />
+			    <q-btn flat color="primary" label="Flat" />
+			    <q-btn flat rounded color="primary" label="Flat Rounded" />
+			    <q-btn flat round color="primary" icon="card_giftcard" />
 			    <br>
-			    <q-btn class="uni" outline color="primary" label="Outline" />
-			    <q-btn class="uni" outline rounded color="primary" label="Outline Rounded" />
-			    <q-btn class="uni" outline round color="primary" icon="card_giftcard" />
+			    <q-btn outline color="primary" label="Outline" />
+			    <q-btn outline rounded color="primary" label="Outline Rounded" />
+			    <q-btn outline round color="primary" icon="card_giftcard" />
 			    <br>
-			    <q-btn class="uni" push color="primary" label="Push" />
-			    <q-btn class="uni" push color="primary" round icon="card_giftcard" />
-			    <q-btn class="uni" push color="white" text-color="primary" label="Push" />
-			    <q-btn class="uni" push color="white" text-color="primary" round icon="card_giftcard" />
+			    <q-btn push color="primary" label="Push" />
+			    <q-btn push color="primary" round icon="card_giftcard" />
+			    <q-btn push color="white" text-color="primary" label="Push" />
+			    <q-btn push color="white" text-color="primary" round icon="card_giftcard" />
 			    <br>
-			    <q-btn class="uni" unelevated color="primary" label="Unelevated" />
-			    <q-btn class="uni" unelevated rounded color="primary" label="Unelevated Rounded" />
-			    <q-btn class="uni" unelevated round color="primary" icon="card_giftcard" />
+			    <q-btn unelevated color="primary" label="Unelevated" />
+			    <q-btn unelevated rounded color="primary" label="Unelevated Rounded" />
+			    <q-btn unelevated round color="primary" icon="card_giftcard" />
 			    <br>
-			    <q-btn class="uni" no-caps color="primary" label="No caps" />
+			    <q-btn no-caps color="primary" label="No caps" />
 			    <br>
 			    <q-btn class="uni glossy" color="teal" label="Glossy" />
 			    <q-btn class="uni glossy" rounded color="deep-orange" label="Glossy Rounded" />
@@ -64,40 +56,62 @@
 		</Lanmu>
 		<Lanmu title="加载与进度">
 			<div class="q-pa-md q-gutter-sm">
-				<q-btn class="uni"
-					:loading="progress[0].loading"
-					:percentage="progress[0].percentage"
-					color="primary"
-					@click="startComputing(0)"
-					style="width:150px"
-				>
-					Compute PI
-					<template v-slot:loading>
-						<q-spinner class="on-left" />
-						Computing...
-					</template>
-				</q-btn>
+				<view>
+					<q-btn
+						:loading="progress[0].loading"
+						:percentage="progress[0].percentage"
+						color="primary"
+						@click="startComputing(0)"
+						style="width:150px"
+					>
+						Compute PI
+						<template v-slot:loading>
+							<q-spinner class="on-left" />
+							Computing...
+						</template>
+					</q-btn>
+					自定义loading插槽
+				</view>
 			
-				<q-btn class="uni"
-					round
-					:loading="progress[1].loading"
-					:percentage="progress[1].percentage"
-					color="secondary"
-					@click="startComputing(1)"
-					icon="cloud_upload"
-				/>
+				<view>
+					<q-btn
+						round
+						:loading="progress[1].loading"
+						color="secondary"
+						@click="startComputing(1)"
+						icon="cloud_upload"
+					/> 普通加载效果
+				</view>
 			
-				<q-btn class="uni"
-					unelevated
-					:loading="progress[2].loading"
-					:percentage="progress[2].percentage"
-					dark-percentage
-					color="orange"
-					text-color="grey-9"
-					@click="startComputing(2)"
-					icon="cloud_upload"
-					style="width:100px"
-				/>
+				<view>
+					<q-btn
+						unelevated
+						:loading="progress[2].loading"
+						:percentage="progress[2].percentage"
+						color="orange"
+						text-color="grey-9"
+						@click="startComputing(2)"
+						icon="cloud_upload"
+						style="width:100px"
+					/>
+					普通进度条
+				</view>
+			
+				<view>
+					<q-btn
+						unelevated
+						:loading="progress[3].loading"
+						:percentage="progress[3].percentage"
+						dark-percentage
+						color="orange"
+						text-color="grey-9"
+						@click="startComputing(3)"
+						icon="cloud_upload"
+						style="width:100px"
+					/>
+					暗模式进度条
+				</view>
+				
 			</div>
 		</Lanmu>
 		
@@ -141,6 +155,14 @@
 				</q-btn-group>
 			</view>
 		</Lanmu>
+		
+		<Lanmu title="Link">
+			<view class="q-gutter-sm">
+				<q-btn color="primary" label="内部连接" to="/pages/components/card" />
+				<q-btn color="primary" label="URL连接" href="http://dictbag.com" />
+				<q-btn color="primary" label="小程序连接" mp="wxa91ff29be8dbb11c://pages/components/btn?id=12" />
+			</view>
+		</Lanmu>
 	</q-page>
 </template>
 
@@ -149,6 +171,7 @@
 		data(){
 			return {
 				progress: [
+					{ loading: false, percentage: 0 },
 					{ loading: false, percentage: 0 },
 					{ loading: false, percentage: 0 },
 					{ loading: false, percentage: 0 }

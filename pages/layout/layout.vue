@@ -41,7 +41,7 @@
 				<view class="q-gutter-sm">
 					<q-btn color="green" label="设置标题" @click="titleTxt='测试标题'" />
 					<q-btn color="green" label="设置标题颜色"
-						@click="titleColor={frontColor:'#ff0000',backgroundColor:'#FF6600'}" />
+						@click="titleColor={frontColor:'#ffffff',backgroundColor:'#FF6600'}" />
 				</view>
 			</view>
 			<view class="q-py-sm">
@@ -52,11 +52,11 @@
 
 		<!-- 底部内容 -->
 		<template #footer>
-			<q-footer className="bg-teal-1">
-				<q-tabs v-model="tab" narrow-indicator dense className="text-teal col" align="justify">
-					<q-tab name="mails" icon="mail" label="Mails" />
-					<q-tab name="alarms" icon="alarm" label="Alarms" />
-					<q-tab name="movies" icon="movie" label="Movies" />
+			<q-footer className="bg-teal-1 text-blue-grey">
+				<q-tabs v-model="tab" narrow-indicator dense active-color="blue" align="justify">
+					<q-tab no-caps name="mails" icon="mail" label="Mails" />
+					<q-tab no-caps name="alarms" icon="alarm" label="Alarms" />
+					<q-tab no-caps name="movies" icon="movie" label="Movies" />
 				</q-tabs>
 			</q-footer>
 		</template>

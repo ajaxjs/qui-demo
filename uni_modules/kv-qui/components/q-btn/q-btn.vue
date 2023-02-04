@@ -35,7 +35,7 @@
 			<slot v-if="$slots.loading" name="loading"></slot>
 			<q-spinner v-else />
 		</view>
-		<q-ripple class="ripple" v-if="!disable" ref="ripple"></q-ripple>
+		<q-ripple class="ripple" v-if="!disable && ripple" :color="typeof(ripple) == 'string'?ripple:''" ref="ripple"></q-ripple>
 	</button>
 </template>
 

@@ -76,7 +76,7 @@ export const useBtnProps = {
   tabindex: [ Number, String ],
 
   ripple: {
-    type: [ Boolean, Object ],
+    type: [ Boolean, String ],
     default: true
   },
 

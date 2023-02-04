@@ -31,7 +31,7 @@
 						{
 							name: 'Typography 排板',
 							path: '/pages/identity/typography',
-							icon: 'palette'
+							icon: 'text_fields'
 						},
 						{
 							name: 'Color 颜色',

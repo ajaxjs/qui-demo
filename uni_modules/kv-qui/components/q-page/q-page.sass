@@ -31,6 +31,9 @@ q-page, .q-page
 .q-header, .q-footer, .q-page, .q-page-container
   position: relative
 
+.q-page-container
+  max-width: 100%
+
 scroll-view.q-page-container
   max-height: var(--container-height)
 
@@ -53,6 +56,8 @@ scroll-view.q-page-container
       bottom: 10px
 
 .q-footer
+  q-tabs,.q-tabs
+    flex: 10000 1 0%
   &--hidden
     transform: translateY(110%)
   &--bordered

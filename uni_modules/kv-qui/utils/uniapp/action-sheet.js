@@ -1,5 +1,4 @@
 import {isObject,isFunction} from '../is.js'
-import each from '../each.js'
 
 /*
 参数说明
@@ -25,7 +24,7 @@ export default function (items, sets) {
 	const itemList = items.map(vo=>vo[label])
 	const opts = Object.assign({}, sets, {itemList})
 	
-	each(['success','fail','complete'], key=>{
+	['success','fail','complete'].forEach(key=>{
 		const fun = opts[key]
 		if(fun && isFunction(fun)){
 			opts[key] = function (evt) {
@@ -39,6 +38,5 @@ export default function (items, sets) {
 			}
 		}
 	})
-	console.log(opts);
 	uni.showActionSheet(opts);
 }

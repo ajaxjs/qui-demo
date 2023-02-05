@@ -1,4 +1,10 @@
-# kv-qui 安装配置
+# kv-qui
+
+基于Quasar重构的UniAPP UI解决方案。
+
+国内可以访问gitee: https://gitee.com/kevinui/qui-demo 
+
+# 安装配置
 
 在根目录新建配置文件 `qui.config.js` 文件名不要修改，组件内有引用。放在与`main.js`同一目录。
 

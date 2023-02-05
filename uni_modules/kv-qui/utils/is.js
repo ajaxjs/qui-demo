@@ -148,9 +148,14 @@ export function isJson (obj) {
 		&& !obj.length;
 }
 
+export function isArray (obj){
+	return Array.isArray(obj)
+}
+
 export default {
 	deepEqual: isDeepEqual,
 	object: isObject,
+	array: isArray,
 	date: isDate,
 	regexp: isRegexp,
 	number: isNumber,

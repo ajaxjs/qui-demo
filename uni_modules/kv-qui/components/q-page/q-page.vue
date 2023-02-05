@@ -17,6 +17,7 @@
 	import {useAttrProps} from '../../composables/private/use-attr.js'
 	import { isObject } from '../../utils/is.js'
 	import { quasarKey } from '../../utils/private/symbols.js'
+	import { currentRoute } from '../../utils/uniapp/page.js'
 	import LoadingBar from './LoadingBar.vue'
 	
 	
@@ -39,7 +40,7 @@
 			const $q = inject(quasarKey)
 			const noop = ()=>{}
 			
-			const isCustom = $q.utils.getRoute('navigationStyle')=='custom'
+			const isCustom = currentRoute().style.navigationStyle=='custom'
 			
 			const {headHeight,footHeight} = $q.config
 			const {windowHeight,statusBarHeight,safeAreaInsets, uniPlatform} = $q.platform

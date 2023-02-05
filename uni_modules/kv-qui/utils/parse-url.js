@@ -14,7 +14,7 @@ const field = {
 // 匹配
 const regex = /^((\w+):\/\/)?((\w+):?(\w+)?@)?(\/?[^\/\?:]+):?(\d+)?(\/?[^\?#]+)?\??([^#]+)?#?(\w*)/;
 
-// 字符串转对象
+// Query字符串转对象
 export const queryParse = function(qs) {
 	let items = qs && typeof(qs) == 'string' ? qs.split("&") : [];
 	let result = {}
@@ -32,19 +32,9 @@ export const queryParse = function(qs) {
 		};
 	};
 	return result;
-	/*
-	var args = qs && typeof(qs)=='string' ? qs.split("&") : [];
-	var vals = new Object();
-	for (var i = 0; i < args.length; i++) {
-		var nameVal = args[i].split("=");
-		var temp = unescape(nameVal[1]).split('+');
-		nameVal[1] = temp.join(' ');
-		vals[nameVal[0]] = nameVal[1];
-	}
-	return vals;*/
 };
 
-// 对象转字符串
+// Query对象转字符串
 export const queryString = function(obj) {
 	let str = ''
 	if (typeof obj == 'object') {
@@ -121,4 +111,8 @@ export const parseUrl = function(href, prms) {
 	return url
 }
 
-export default parseUrl
+export default {
+	parse: parseUrl,
+	deQuery: queryParse,
+	enQuery: queryString,
+}

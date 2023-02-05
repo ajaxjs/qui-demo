@@ -1,4 +1,3 @@
-import each from '../each.js'
 
 /*
 $uni.alert('一个简单的提示！')
@@ -12,7 +11,7 @@ $uni.alert('这是一个提示！', '这是标题', ['取消1','确定2'], (evt)
 
 export default function (content){
 	const opts = {content}
-	each(arguments, (vo,k)=>{
+	Object.values(arguments).forEach((vo,k)=>{
 		if(k > 0){
 			const tag = typeof vo
 			if(tag == 'string'){
@@ -22,7 +21,7 @@ export default function (content){
 				vo = vo.splice(0,2)
 				opts.showCancel = vo.length == 2 && vo[0]?true:false
 				if(vo.length == 1) vo.unshift(null)
-				each(vo, (text,i)=>{
+				vo.forEach((text,i)=>{
 					const btn = typeof text == 'string' ? {text} : text
 					if(btn && btn['text']) opts[btnTp[i]+'Text'] = btn['text']
 					if(btn && btn['color']) opts[btnTp[i]+'Color'] = btn['color']

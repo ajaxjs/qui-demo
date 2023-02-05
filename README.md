@@ -19,7 +19,7 @@
 1. Avatar 头像
 2. Icon 图标
 3. Image 图片
-4. [Button 按扭](./.documents/components/Button.md)
+4. [Button 按扭](./.documents/compontnes/Button.md)
 5. Badge 徽标
 6. Chip 碎片
 7. Card 卡片

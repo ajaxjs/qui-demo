@@ -35,7 +35,6 @@
 			ripple(evt){
 				const ti = Math.ceil(evt.timeStamp)
 				this.rips[ti] = this.buildStyle(evt)
-				console.log(this.color);
 				setTimeout(()=>{
 					this.rips[ti] = Object.assign({}, this.rips[ti],{left: '-50%', top: '-50%', width: '200%', height: '200%'})
 					setTimeout(()=>{

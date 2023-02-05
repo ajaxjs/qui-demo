@@ -9,6 +9,8 @@
 	import { computed, inject } from "vue"
 	import {useAttrProps} from '../../composables/private/use-attr.js'
 	import { quasarKey } from '../../utils/private/symbols.js'
+	import { currentRoute } from '../../utils/uniapp/page.js'
+	
 	export default {
 		props: {
 			...useAttrProps,
@@ -21,7 +23,7 @@
 		},
 		setup(props){
 			const $q = inject(quasarKey)
-			const isCustom = $q.utils.getRoute('navigationStyle')=='custom'
+			const isCustom = currentRoute().style.navigationStyle=='custom'
 			
 			const style = computed(()=>{
 				const {headHeight} = $q.config

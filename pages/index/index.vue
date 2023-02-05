@@ -153,7 +153,7 @@
 					],
 					'Plugins': [
 						{
-							name:'UniAPP 界面插件封装',
+							name:'UniAPP 插件封装',
 							path: '/pages/plugins/uniapp',
 							icon: 'flag'
 						}

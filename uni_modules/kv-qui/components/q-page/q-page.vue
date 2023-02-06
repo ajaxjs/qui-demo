@@ -71,7 +71,6 @@
 			watch(()=>props.title, setTitle)
 			// 设置标题栏样式
 			const setNavigationBarColor = (navSet)=>{
-				console.log(navSet);
 				if(navSet && Object.keys(navSet).filter(vo=>['frontColor','backgroundColor'].includes(vo))){
 					uni.setNavigationBarColor(Object.assign({complete: noop},navSet))
 				}

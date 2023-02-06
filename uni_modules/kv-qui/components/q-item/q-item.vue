@@ -1,6 +1,6 @@
 <template>
 	<view :class="classes" role="listitem"
-		@click.stop="onClick"
+		@click="onClick"
 		@keyup="onKeyup"
 	>
 		<slot></slot>
@@ -49,10 +49,7 @@
 
 		emits: ['click', 'keyup'],
 
-		setup(props, {
-			slots,
-			emit
-		}) {
+		setup(props, { slots, emit }) {
 			const { proxy: { $q } } = getCurrentInstance()
 
 			const isDark = useDark(props, $q)

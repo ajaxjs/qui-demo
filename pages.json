@@ -94,13 +94,19 @@
 		{
 			"path": "pages/components/badge",
 			"style": {
-				"navigationBarTitleText": "Button"
+				"navigationBarTitleText": "Badge"
+			}
+		},
+		{
+			"path": "pages/components/chip",
+			"style": {
+				"navigationBarTitleText": "Chip"
 			}
 		},
 		{
 			"path": "pages/components/card",
 			"style": {
-				"navigationBarTitleText": "Button"
+				"navigationBarTitleText": "Card"
 			}
 		},
 		{
@@ -161,6 +167,12 @@
 			"path": "pages/components/swiper",
 			"style": {
 				"navigationBarTitleText": "Swiper"
+			}
+		},
+		{
+			"path": "pages/components/toggle",
+			"style": {
+				"navigationBarTitleText": "Toggle"
 			}
 		},
 		{

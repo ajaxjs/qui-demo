@@ -122,6 +122,9 @@ export function isObject (v) {
   return v !== null && typeof v === 'object' && Array.isArray(v) !== true
 }
 
+export function isString (v) {
+  return Object.prototype.toString.call(v) === '[object String]'
+}
 export function isDate (v) {
   return Object.prototype.toString.call(v) === '[object Date]'
 }

@@ -96,6 +96,11 @@
 							icon: 'local_offer'
 						},
 						{
+							name: 'Chip 碎片',
+							path: '/pages/components/chip',
+							icon: 'local_offer'
+						},
+						{
 							name: 'Card 卡片',
 							path: '/pages/components/card',
 							icon: 'auto_awesome_motion'
@@ -149,6 +154,11 @@
 							name: 'Swiper 滚动',
 							path: '/pages/components/swiper',
 							icon: 'swipe'
+						},
+						{
+							name: 'Toggle 开关',
+							path: '/pages/components/toggle',
+							icon: 'toggle_on'
 						},
 					],
 					'Plugins': [

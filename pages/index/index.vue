@@ -160,6 +160,16 @@
 							path: '/pages/components/toggle',
 							icon: 'toggle_on'
 						},
+						{
+							name: 'Rating 评分',
+							path: '/pages/components/rating',
+							icon: 'hotel_class'
+						},
+						{
+							name: 'Skeleton 骨架屏',
+							path: '/pages/components/skeleton',
+							icon: 'vertical_split'
+						},
 					],
 					'Plugins': [
 						{
@@ -191,8 +201,7 @@
 
 
 <style lang="sass">
-.test
-  transition: all 1s
+
 .content
   padding: calc(100% - 44px - env(safe-area-inset-top))
 </style>

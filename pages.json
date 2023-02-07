@@ -176,6 +176,18 @@
 			}
 		},
 		{
+			"path": "pages/components/rating",
+			"style": {
+				"navigationBarTitleText": "Rating"
+			}
+		},
+		{
+			"path": "pages/components/skeleton",
+			"style": {
+				"navigationBarTitleText": "Skeleton"
+			}
+		},
+		{
 			"path": "pages/plugins/uniapp",
 			"style": {
 				"navigationBarTitleText": "Uniapp 封装"

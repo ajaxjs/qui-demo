@@ -1,5 +1,6 @@
 
 .q-spinner
+  display: inline-block
   vertical-align: middle
   width: 1em
   height: 1em
@@ -8,24 +9,26 @@
   position: relative
   .path
     transform-origin: center center
-    animation: q-spin 2s linear infinite
-    position: absolute
-    left: 0
-    top: 0
-    bottom: 0
-    right: 0
-    border: currentColor dotted
-    border-radius: 100%
+    animation: q-spin 1s ease-out infinite
+    &::before,&::after
+      position: absolute
+      content: ''
+      display: block
+      left: 0
+      top: 0
+      bottom: 0
+      right: 0
+      border: transparent solid var(--q-thickness)
+      border-radius: 100%
+    &::before
+      border-color: rgba(153,153,153,0.4)
+    &::after
+      opacity: 0.9
+      border-top-color: currentColor
     
 
 @keyframes q-spin
   0%
-    transform: rotate3d(0, 0, 1, 0deg) #{"/* rtl:ignore */"}
-  25%
-    transform: rotate3d(0, 0, 1, 90deg) #{"/* rtl:ignore */"}
-  50%
-    transform: rotate3d(0, 0, 1, 180deg) #{"/* rtl:ignore */"}
-  75%
-    transform: rotate3d(0, 0, 1, 270deg) #{"/* rtl:ignore */"}
-  100%
-    transform: rotate3d(0, 0, 1, 359deg) #{"/* rtl:ignore */"}
+    transform: rotate(0deg)
+  to
+    transform: rotate(1turn)

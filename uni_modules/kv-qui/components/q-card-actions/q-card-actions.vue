@@ -7,7 +7,7 @@
 <script>
 	import { computed } from 'vue'
 	
-	import useAlign, { useAlignProps } from '../../composables/private/use-align.js'
+	import { useAlignProps, alignMap } from '../../composables/private/use-align.js'
 	
 	import { createComponent } from '../../utils/private/create.js'
 	
@@ -20,10 +20,10 @@
 	  },
 	
 	  setup (props, { slots }) {
-	    const alignClass = useAlign(props)
 	
 	    const classes = computed(() =>
-	      `q-card__actions ${ alignClass.value }`
+	      `q-card__actions`
+		  + ` ${ props.vertical === true ? 'items' : 'justify' }-${ props.align ? alignMap[ props.align ] : 'around' }`
 	      + ` q-card__actions--${ props.vertical === true ? 'vert column' : 'horiz row' }`
 	    )
 	

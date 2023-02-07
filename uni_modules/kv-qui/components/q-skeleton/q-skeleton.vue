@@ -1,0 +1,185 @@
+<template>
+	<view :class="classes" :style="style"></view>
+</template>
+
+<script>
+	import { computed, getCurrentInstance } from "vue";
+	import useDark from '../../composables/private/use-dark.js'
+	import {useSkeletonProps,skeletonTypes,skeletonAnimations} from './use-skeleton.js'
+	
+	export default {
+		props: useSkeletonProps,
+		setup(props,{attrs}){
+			const vm = getCurrentInstance()
+			const isDark = useDark(props, vm.proxy.$q)
+			const {type} = props
+			const style = computed(() => {
+				const size = props.size !== void 0 ?
+					[props.size, props.size] :
+					[props.width, props.height]
+			
+				return {
+					'--q-skeleton-speed': `${ props.animationSpeed }ms`,
+					width: size[0],
+					height: size[1]
+				}
+			})
+			const classes = computed(() =>
+				`q-skeleton q-skeleton--${ isDark.value === true ? 'dark' : 'light' } q-skeleton--type-${ props.type }` +
+				(props.animation !== 'none' ? ` q-skeleton--anim q-skeleton--anim-${ props.animation }` : '') +
+				(props.square === true ? ' q-skeleton--square' : '') +
+				(props.bordered === true ? ' q-skeleton--bordered' : '')
+			)
+			return {
+				classes,
+				style,
+			}
+		}
+	}
+</script>
+
+<style lang="sass">
+@import '../../css/variables.sass'
+.q-skeleton
+  --q-skeleton-speed: 1500ms
+  background: $separator-color
+  border-radius: $generic-border-radius
+
+  &--anim
+    cursor: wait
+
+  /*
+    maintain size even with border
+    for types that have height specified
+   */
+  box-sizing: border-box
+
+  &:before
+    content: '\00a0'
+
+  &--type
+    &-text
+      transform: scale(1, .5)
+
+    &-circle,
+    &-avatar
+      height: 48px
+      width: 48px
+      border-radius: 50%
+
+    &-btn
+      width: 90px
+      height: 36px
+    &-badge
+      width: 70px
+      height: 16px
+    &-chip
+      width: 90px
+      height: 28px
+      border-radius: 16px
+    &-toolbar
+      height: 50px
+    &-checkbox,
+    &-radio
+      width: 40px
+      height: 40px
+      border-radius: 50%
+    &-toggle
+      width: 56px
+      height: 40px
+      border-radius: 7px
+    &-slider,
+    &-range
+      height: 40px
+    &-input
+      height: 56px
+
+  &--bordered
+    border: 1px solid rgba(0,0,0,.05)
+
+  &--square
+    border-radius: 0
+
+  &--anim-fade
+    animation: q-skeleton--fade var(--q-skeleton-speed) linear .5s infinite
+
+  &--anim-pulse
+    animation: q-skeleton--pulse var(--q-skeleton-speed) ease-in-out .5s infinite
+  &--anim-pulse-x
+    animation: q-skeleton--pulse-x var(--q-skeleton-speed) ease-in-out .5s infinite
+  &--anim-pulse-y
+    animation: q-skeleton--pulse-y var(--q-skeleton-speed) ease-in-out .5s infinite
+
+  &--anim-wave,
+  &--anim-blink,
+  &--anim-pop
+    position: relative
+    overflow: hidden
+    z-index: 1
+    &:after
+      content: ''
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      z-index: 0
+
+  &--anim-blink:after
+    background: rgba(255,255,255,.7)
+    animation: q-skeleton--fade var(--q-skeleton-speed) linear .5s infinite
+  &--anim-wave:after
+    background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,.5), rgba(255,255,255,0))
+    animation: q-skeleton--wave var(--q-skeleton-speed) linear .5s infinite
+
+  &--dark
+    background: rgba(255, 255, 255, 0.05)
+
+    &.q-skeleton--bordered
+      border: 1px solid rgba(255,255,255,.25)
+
+    &.q-skeleton--anim-wave:after
+      background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,.1), rgba(255,255,255,0))
+
+    &.q-skeleton--anim-blink:after
+      background: rgba(255,255,255,.2)
+
+@keyframes q-skeleton--fade
+  0%
+    opacity: 1
+  50%
+    opacity: .4
+  100%
+    opacity: 1
+
+@keyframes q-skeleton--pulse
+  0%
+    transform: scale(1)
+  50%
+    transform: scale(.85)
+  100%
+    transform: scale(1)
+
+@keyframes q-skeleton--pulse-x
+  0%
+    transform: scaleX(1)
+  50%
+    transform: scaleX(.75)
+  100%
+    transform: scaleX(1)
+
+@keyframes q-skeleton--pulse-y
+  0%
+    transform: scaleY(1)
+  50%
+    transform: scaleY(.75)
+  100%
+    transform: scaleY(1)
+
+@keyframes q-skeleton--wave
+  0%
+    transform: translateX(-100%)
+  100%
+    transform: translateX(100%)
+
+</style>

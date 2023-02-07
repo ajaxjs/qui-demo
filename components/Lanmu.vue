@@ -6,7 +6,7 @@
 			<q-btn dense flat size="sm" :label="hide?'显示':'隐藏'" v-if="toggleBtn" @click="hide = !hide" />
 		</view>
 		<q-separator v-if="!hide"></q-separator>
-		<view class="q-pa-sm" :class="contentClass" :style="contentStyle" v-if="!hide">
+		<view class="q-pa-sm" :class="contentClass" :style="contentStyle" v-show="!hide">
 			<slot></slot>
 		</view>
 	</div>
@@ -32,11 +32,7 @@
 </script>
 
 <style lang="sass">
-.q-page-container
-    lanmu:first-child .lanmu
-      color: #F00
-
-lanmu:first-child .lanmu,
+.p-page lanmu:first-child .lanmu,
 .lanmu:first-child
   margin-top: 10px
 

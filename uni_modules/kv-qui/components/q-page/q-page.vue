@@ -5,7 +5,7 @@
 		
 		<slot name="header"></slot>
 		<slot name="container" v-if="$slots.container"></slot>
-		<view v-else class="q-page-container">
+		<view v-else class="q-page-container" :class="containerClass">
 			<slot></slot>
 		</view>
 		<slot name="footer"></slot>
@@ -35,6 +35,7 @@
 			title: String,
 			navigationBarColor: Object,
 			loadingBar: [Boolean, Object, String, Number],
+			containerClass: [Object, Array, String],
 		},
 		setup(props, { slots, emit }){
 			const $q = inject(quasarKey)

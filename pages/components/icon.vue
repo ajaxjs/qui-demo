@@ -1,5 +1,28 @@
 <template>
 	<q-page>
+		<Lanmu title="Loading 图标" content-class="q-px-md q-pb-md">
+			<view class="lm-title">颜色</view>
+			<view class="row q-gutter-sm">
+				<view  v-for="vo in ['red','blue','orange']" :key="vo" :class="'text-'+vo">
+					<q-spinner size="lg" />{{vo}}
+				</view>
+				<view class="col-12 bg-blue-grey-2 text-blue-grey q-pa-sm rounded-borders">
+					默认继承父级文本颜色，也可以通过设置组件的color="red"进行设置
+				</view>
+			</view>
+			<view class="lm-title">大小</view>
+			<view class="row q-gutter-sm">
+				<view  v-for="vo in ['xs','sm','md','lg','50px']" :key="vo">
+					<q-spinner color="blue" :size="vo" />{{vo}}
+				</view>
+			</view>
+			<view class="lm-title">粗细[数字参数]</view>
+			<view class="row q-gutter-sm">
+				<view  v-for="vo in 5" :key="vo">
+					<q-spinner color="blue" size="lg" :thickness="vo" />{{vo}}
+				</view>
+			</view>
+		</Lanmu>
 		<Lanmu title="Basic" content-class="q-pa-sm">
 			<div class="text-purple row q-gutter-sm" style="font-size: 2em">
 				<q-icon class="uni" name="font_download" />

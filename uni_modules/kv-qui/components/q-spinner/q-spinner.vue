@@ -1,9 +1,6 @@
 <template>
-	<view class="q-spinner-mat" :class="classes" :style="{width:cSize,height:cSize}">
-		<view
-			class="path"
-			:style="{borderWidth: thickness}"
-		/>
+	<view class="q-spinner-mat" :class="classes" :style="{width:cSize,height:cSize,'--q-thickness':thickness+'px'}">
+		<view class="path absolute-full" />
 	</view>
 </template>
 
@@ -11,13 +8,7 @@
 	import useSpinner, { useSpinnerProps } from './use-spinner.js'
 	export default {
 		name: 'QSpinner',
-		props: {
-			...useSpinnerProps,
-			thickness: {
-				type: Number,
-				default: 3
-			}
-		},
+		props: useSpinnerProps,
 		setup (props) {
 		    const { cSize, classes } = useSpinner(props)
 			return {

@@ -35,7 +35,7 @@ q-item-section
 
     &--nowrap
       white-space: nowrap
-
+  > q-item-section:first-child .q-item__section--thumbnail,
   > .q-item__section--thumbnail:first-child,
   > .q-focus-helper + .q-item__section--thumbnail
     margin-left: -16px
@@ -65,7 +65,13 @@ q-item-section
 
     & + .q-item__label
       margin-top: 4px
+/* #ifdef MP */
+q-item-section:last-of-type .q-item__section--side
+  align-items: flex-end
+  padding-right: 0
+  padding-left: 16px
 
+/* #endif */
 .q-item__section--main
   width: auto
   min-width: 0

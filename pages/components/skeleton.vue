@@ -1,17 +1,5 @@
 <template>
 	<q-page>
-		
-		<Lanmu title="JSON渲染">
-			<view class="q-pa-sm">
-				<view class="row q-col-gutter-sm" v-for="(row,i) in formatSkt(ske)" :key="i">
-					<view :class="vo.col" v-for="(vo,k) in row" :key="k">
-						<template v-if="vo.type!== 'empty'">
-							<q-skeleton :type="vo.type" v-for="ki in vo.len" :key="ki" />
-						</template>
-					</view>
-				</view>
-			</view>
-		</Lanmu>
 		<Lanmu title="类型">
 			<view class="row q-col-gutter-md">
 				<view class="col-6" v-for="(vo, i) in skeletonTypes" :key="i">
@@ -74,6 +62,15 @@
 				<q-skeleton type="text" width="50%" class="text-subtitle2" animation="fade" />
 			</q-card-section>
 		</Lanmu>
+			
+		<Lanmu title="JSON数据渲染">
+			<view class="q-pa-sm">
+				<q-skeleton-render :options="skeNew" gutter="y-sm" />
+				<view class="bg-blue-grey-2 text-blue-grey q-pa-sm q-mt-md rounded-borders">
+					为了降低页面复杂度，q-skeleton-render 可以通过接收一个JSON数组来渲染骨架页。可以通过：flex:而已、col:比例、gutter:间距、align:对齐等参数设置排版。具体使用方法，请参数说明上档。
+				</view>
+			</view>
+		</Lanmu>
 	</q-page>
 </template>
 
@@ -81,41 +78,21 @@
 	import {skeletonTypes, skeletonAnimations} from '../../uni_modules/kv-qui/components/q-skeleton/use-skeleton.js'
 	import is from '../../uni_modules/kv-qui/utils/is.js'
 	
-	// 数据格式
-	const fmt = [
+	// 数据格式，数据分为‘块’和‘组’，数组中每个一级元素为一个块。块为对象时，可以设置当前块。
+	// 块为数组时，相当于items。意味着该块无其它参数。
+	// 每个块里面的items为一个组，可以放若干个骨架元素。
+	// 每个骨架元素，由q-skeleton的参数加上排版参数组成。如：flex:而已/col:比例/gutter:间距/align:对齐。具体参数css辅助样式。
+	const skeNew = [
 		{
-			col: 'auto',
-			align: 'around', 
-			gutter: 'sm',
-			class: '',
-			items: [
-				{type: 'avatar'},
-				{type:'text', len: 5, col:true}
-			],
-		}
+			flex: 'row',
+			align: 'around',
+			gutter:'x-sm',
+			items: [{type: 'avatar'},{type:'text', len: 3, col:true}]
+		},
+		[{height: '150px', col:12}],
+		[{type:'btn', len:2, align: 'justify-end',flex:'row', gutter:'x-sm'}]
 	]
 	
-	const ske = [
-		[{type: 'avatar'},{type:'text', len: 5, col:true}],
-		[{type:'empty', col:true},{type:'btn'},{type:'btn'}]
-	]
-	function formatSkt(ske){
-		if(is.array(ske)){
-			ske.forEach(vo=>{
-				if(is.array(vo)){
-					vo = formatSkt(vo)
-				}else if(is.object(vo)){
-					vo.len = vo.len || 1
-					if(vo.col){
-						vo.col = vo.col===true ? 'col' : 'col-'+vo.col
-					}
-					
-				}
-			})
-		}
-		console.log(ske);
-		return ske
-	}
 </script>
 
 <style lang="sass">

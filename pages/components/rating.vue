@@ -2,33 +2,33 @@
 	<q-page>
 		<Lanmu title="基础">
 			<view class="q-gutter-y-md column">
-				<view><q-rating v-model="ratingModel" size="1.5em" icon="thumb_up" /></view>
-				<view><q-rating v-model="ratingModel" size="2em" color="red-7" icon="favorite_border" /></view>
-				<view><q-rating v-model="ratingModel" size="2.5em" color="purple-4" icon="create" /></view>
-				<view><q-rating v-model="ratingModel" size="3em" color="brown-5" icon="pets" /></view>
-				<view><q-rating v-model="ratingModel" size="3.5em" color="green-5" icon="star_border" /></view>
+				<view><q-rating v-model="ratingArr[0]" size="1.5em" icon="thumb_up" /></view>
+				<view><q-rating v-model="ratingArr[1]" size="2em" color="red-7" icon="favorite_border" /></view>
+				<view><q-rating v-model="ratingArr[2]" size="2.5em" color="purple-4" icon="create" /></view>
+				<view><q-rating v-model="ratingArr[3]" size="3em" color="brown-5" icon="pets" /></view>
+				<view><q-rating v-model="ratingArr[4]" size="3.5em" color="green-5" icon="star_border" /></view>
 			</view>
 		</Lanmu>
 		<Lanmu title="高级">
 			<view class="q-gutter-y-md column">
-				<view><q-rating v-model="ratingModel" size="2em" :max="10" color="primary" /></view>
-				<view><q-rating v-model="ratingModel" size="3.5em" icon="img:https://suan-1251134852.cos.ap-guangzhou.myqcloud.com/avatar/random/6.png" /></view>
-				<view><q-rating v-model="ratingModel" size="3.5em" color="green-5" icon="star_border" icon-selected="star" /></view>
-				<view><q-rating v-model="ratingModel" :max="4" size="3.5em" color="green-5" :icon="icons" /></view>
-				<view><q-rating v-model="ratingModel" size="3.5em" color="grey" :color-selected="ratingColors" /></view>
+				<view><q-rating v-model="ratingArr[5]" size="2em" :max="10" color="primary" /></view>
+				<view><q-rating v-model="ratingArr[6]" size="3.5em" icon="img:https://suan-1251134852.cos.ap-guangzhou.myqcloud.com/avatar/random/6.png" /></view>
+				<view><q-rating v-model="ratingArr[7]" size="3.5em" color="green-5" icon="star_border" icon-selected="star" /></view>
+				<view><q-rating v-model="ratingArr[8]" :max="4" size="3.5em" color="green-5" :icon="icons" /></view>
+				<view><q-rating v-model="ratingArr[9]" size="3.5em" color="grey" :color-selected="ratingColors" /></view>
 				
 			</view>
 		</Lanmu>
 		<Lanmu title="只读和禁用">
 			<view class="q-gutter-y-md column">
-				<view><q-rating v-model="ratingModel" size="2em" color="orange" readonly /></view>
-				<view><q-rating v-model="ratingModel" size="2em" color="purple" disable /></view>
+				<view><q-rating v-model="ratingArr[10]" size="2em" color="orange" readonly /></view>
+				<view><q-rating v-model="ratingArr[11]" size="2em" color="purple" disable /></view>
 			</view>
 		</Lanmu>
 		<Lanmu title="尺寸">
 			<view class="q-gutter-y-md column">
 				<view v-for="size in ['xs', 'sm', 'md', 'lg', 'xl']" :key="size">
-					<q-rating :size="size" v-model="ratingModel" icon="stars" color="primary" />
+					<q-rating :size="size" v-model="ratingObj[size]" icon="stars" color="primary" />
 				</view>
 			</view>
 		</Lanmu>
@@ -47,7 +47,8 @@
 
 <script setup>
 import { ref } from "vue";
-	const ratingModel = ref(3)
+	const ratingArr = ref(new Array(11).fill(3))
+	const ratingObj = ref({'xs':3, 'sm':3, 'md':3, 'lg':3, 'xl':3})
 	const icons =  [ 'sentiment_very_dissatisfied', 'sentiment_dissatisfied', 'sentiment_satisfied', 'sentiment_very_satisfied']
 	const ratingColors= [ 'light-green-3', 'light-green-6', 'green', 'green-9', 'green-10' ]
 	

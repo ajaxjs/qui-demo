@@ -9,14 +9,14 @@
 
 1. [Install 安装配置](./.documents/1.安装配置.md)
 2. [Layout 框架布局](./.documents/2.框架布局.md)
-3. Grid Gutter 网格间距
-4. Grid Row 布局网格
+3. [Grid Gutter 网格间距](./.documents/3.网格间距.md)
+4. [Grid Row 布局网格](./.documents/4.网格间距.md)
 
 文档更新中...
 
 ## 组件应用
 
-1. Avatar 头像
+1. [Avatar 头像](./.documents/compontnes/Avatar.md)
 2. Icon 图标
 3. Image 图片
 4. [Button 按扭](./.documents/compontnes/Button.md)

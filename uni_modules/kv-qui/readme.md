@@ -51,17 +51,17 @@ app.use(Qui, QuiConfig)
 # 基础说明
 
 1. [Layout 框架布局](https://github.com/ajaxjs/qui-demo/blob/main/.documents/2.%E6%A1%86%E6%9E%B6%E5%B8%83%E5%B1%80.md)
-2. Grid Gutter 网格间距
-3. Grid Row 布局网格
+2. [Grid Gutter 网格间距](https://github.com/ajaxjs/qui-demo/blob/main/.documents/3.%E7%BD%91%E6%A0%BC%E9%97%B4%E8%B7%9D.md)
+3. [Grid Row 布局网格](https://github.com/ajaxjs/qui-demo/blob/main/.documents/4.%E5%B8%83%E5%B1%80%E7%BD%91%E6%A0%BC.md)
 
 持续更新中。。。
 
 # 组件应用
 
-1. Avatar 头像
+1. [Avatar 头像](https://github.com/ajaxjs/qui-demo/blob/main/.documents/compontnes/Avatar.md)
 2. Icon 图标
 3. Image 图片
-4. [Button 按扭](https://github.com/ajaxjs/qui-demo/blob/main/.documents/components/Button.md)
+4. [Button 按扭](https://github.com/ajaxjs/qui-demo/blob/main/.documents/compontnes/Button.md)
 5. Badge 徽标
 6. Chip 碎片
 7. Card 卡片

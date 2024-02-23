@@ -1,7 +1,7 @@
 {
   "id": "kv-qui",
   "displayName": "kv-qui 基于Vue3.0 全平台ui组件库",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "QUI 基于Quasar的重构，全面兼容uni-app及小程序，Vue3.0 全平台ui组件库。",
   "keywords": [
     "kv-qui,Quasar,ui"

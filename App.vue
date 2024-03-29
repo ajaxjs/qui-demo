@@ -1,7 +1,6 @@
 <script>
 	export default {
 		onLaunch: function() {
-			console.log('$q 对象', this.$q);
 			console.log('App Launch')
 		},
 		onShow: function() {
@@ -14,6 +13,10 @@
 </script>
 
 <style lang="scss">
+	/* #ifdef MP */
+	@import './uni_modules/kv-qui/css/index.sass';
+	/* #endif */
+	
 	/* Demo全局样式 */
 	.lm-title{
 		font-size: 1.2em;

@@ -164,6 +164,10 @@ q-btn
     &--dark
       .q-btn__progress-indicator
         background: rgba(0,0,0,.2)
+  /* 修复点击白底 */
+  &--flat, &--outline
+    &.button-hover
+      background-color: transparent !important
 
   &--flat, &--outline
     .q-btn__progress-indicator

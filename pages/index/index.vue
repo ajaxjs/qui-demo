@@ -146,6 +146,11 @@
 							icon: 'view_week'
 						},
 						{
+							name: 'Calendar 日历',
+							path: '/pages/components/calendar',
+							icon: 'web_asset'
+						},
+						{
 							name: 'Tabs 切换',
 							path: '/pages/components/tabs',
 							icon: 'switch_left'

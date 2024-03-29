@@ -1,12 +1,9 @@
 import {ref, computed} from 'vue'
-import qdate from './dateUtils'
-import Nongli from './Nongli.js'
+import qdate from '../../plugins/QDate.js'
+import Nongli from '../../utils/private/date-nongli.js'
 import {pad} from '../../utils/format.js'
 import usePicker,{usePickerProps} from '../q-picker/usePicker.js'
 
-
-//import {pad} from '../../utils/format.js'
-//import qdate from '../../utils/date/QDate.js'
 
 const yearVali = y => y>=1900 && y<= 2100
 const lifaVali = lf=>['公','农'].includes(lf)

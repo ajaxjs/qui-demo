@@ -158,6 +158,12 @@
 			}
 		},
 		{
+			"path": "pages/components/calendar",
+			"style": {
+				"navigationBarTitleText": "Calendar"
+			}
+		},
+		{
 			"path": "pages/components/tabs",
 			"style": {
 				"navigationBarTitleText": "Tabs"

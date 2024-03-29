@@ -1,5 +1,5 @@
-import clone from '../../utils/clone.js'
-import Nongli from './Nongli.js'
+import clone from '../utils/clone.js'
+import Nongli from '../utils/private/date-nongli.js'
 
 const padStart = (string, length, pad) => {
 	const s = String(string)
@@ -18,7 +18,9 @@ const padZoneStr = (instance) => {
 const isQDate = d => d instanceof QDate
 
 const qdate = function(date,format) {
-	if (isQDate(date)) {
+	if(!date){
+		date = new Date();
+	}else if (isQDate(date)) {
 		return date.clone()
 	}
 	return new QDate(date,format)
@@ -119,7 +121,6 @@ class QDate {
 
 		return str.replace(REGEX_FORMAT, (match, $1) => $1 || matches[match] || zoneStr.replace(':', '')) // 'ZZ'
 	}
-
 	utcOffset() {
 		// Because a bug at FF24, we're rounding the timezone offset around 15 minutes
 		// https://github.com/moment/moment/pull/1871

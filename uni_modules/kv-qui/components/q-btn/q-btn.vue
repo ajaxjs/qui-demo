@@ -108,7 +108,6 @@
 					switch (name){
 						case 'click':
 							this.$refs.ripple.ripple(evt)
-							
 							this.$uni.openUrl(this.linkAttrs)
 							break;
 						default:

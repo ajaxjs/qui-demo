@@ -1,0 +1,35 @@
+.q-calendar__view{
+	min-height: 340px;
+}
+
+.q-calendar {
+	&__header {
+		color: #fff;
+		padding: 16px;
+
+		&-year {
+			opacity: 0.7;
+		}
+		&-date {
+			font-size: 1.6em;
+		}
+	}
+	&__body{
+		min-height: 320px;
+	}
+	&__table{
+		.day{
+			border-radius: 5px;
+			border:transparent solid 1px;
+		}
+		.today{
+			position: relative;
+			border-color: rgba(100, 100, 100, 0.3);
+		}
+		.selected{
+			color: #fff;
+			background-color: var(--q-primary);
+		}
+	}
+}
+

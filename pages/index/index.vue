@@ -175,6 +175,11 @@
 							path: '/pages/components/skeleton',
 							icon: 'vertical_split'
 						},
+						{
+							name: 'Chat Message 消息',
+							path: '/pages/components/chat_message',
+							icon: 'chat_bubble'
+						},
 					],
 					'Plugins': [
 						{

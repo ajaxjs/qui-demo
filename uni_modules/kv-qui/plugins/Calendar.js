@@ -1,11 +1,14 @@
 import clone from '../utils/clone.js'
 import conf from '../config.js';
 import lunar from '../utils/private/dayjs-lunar.js'
+
+const external = conf['external'] || {}
 // 读取Dayjs
-const {dayjs} = conf.external;
+let dayjs = external.dayjs;
 try{
 	dayjs.extend(lunar);
 }catch(e){
+	dayjs = new Function;
 	console.error('请在qui.config.js中的external中引入dayjs');
 }
 

@@ -1,10 +1,5 @@
 import { ref, computed, watch, nextTick, getCurrentInstance } from 'vue'
 
-/*import { isRuntimeSsrPreHydration } from '../../plugins/Platform.js'
-
-import QIcon from '../../components/icon/QIcon.js'
-import QSpinner from '../../components/spinner/QSpinner.js'
-*/
 import useDark, { useDarkProps } from '../../composables/private/use-dark.js'
 import useValidate, { useValidateProps } from './use-validate.js'
 import useSplitAttrs from './use-split-attrs.js'
@@ -300,11 +295,7 @@ export default function(state) {
 		// prevent activating the field but keep focus on desktop
 		stopAndPrevent(e)
 
-		if ($q.platform.is.mobile !== true) {
-			const el = (state.targetRef !== void 0 && state.targetRef.value) || state.rootRef.value
-			state.focused.value = true
-			//el.focus()
-		} else if (state.rootRef.value.contains(document.activeElement) === true) {
+		if (state.rootRef.value.contains(document.activeElement) === true) {
 			document.activeElement.blur()
 		}
 
@@ -320,10 +311,6 @@ export default function(state) {
 
 		nextTick(() => {
 			resetValidation()
-
-			if ($q.platform.is.mobile !== true) {
-				isDirtyModel.value = false
-			}
 		})
 	}
 	// 计数

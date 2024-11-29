@@ -35,6 +35,7 @@
 				/* #endif */
 				return props.styles ? [styl, props.styles] : styl
 			})
+			
 			const classes = computed(() =>
 				'q-header fixed-top q-layout__section--marginal row no-wrap items-center justify-center'
 				+ (props.bordered === true ? ' q-header--bordered' : '')

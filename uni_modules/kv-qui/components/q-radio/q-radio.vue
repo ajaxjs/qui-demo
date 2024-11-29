@@ -1,6 +1,6 @@
 <template>
 	<radio-group class="row" :class="'q-gutter-'+gutter" @change="onChange">
-		<label class="q-radio" :class="[labelClass,{'q-checked':status[i]}]" :style="labelStyle" v-for="(vo, i) in opts" :key="i">
+		<label class="q-radio" v-for="(vo, i) in opts" :key="i" :class="[labelClass,{'q-checked':status[i]}]" :style="labelStyle">
 			<q-icon class="check-icon" v-if="icons[i]" :name="icons[i]" size="22px" />
 			<radio v-show="!icons[i]" :value="vo.value" :checked="status[i]" :color="vo.color" />
 			<text>{{vo.label}}</text>

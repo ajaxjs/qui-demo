@@ -1,5 +1,5 @@
 <template>
-	<view :class="[classes,className]" class="column" :style="[styles,style]">
+	<view :class="[classes,className]" class="column" :style="[styles,style].filter(vo=>vo)">
 		<slot name="before"></slot>
 		<view class="q-drawer__content col">
 			<slot></slot>
@@ -7,9 +7,9 @@
 		<slot name="after"></slot>
 		<view v-if="elevated" class="q-layout__shadow absolute-full overflow-hidden no-pointer-events"></view>
 	</view>
-	<template v-if="overlay !== true">
+	<template v-if="overlay">
 		<view v-show="showing"
-			class="fullscreen q-drawer__backdrop"
+			class="q-drawer__backdrop"
 			:class="backgropClass"
 			@click="onClickBackGroup"
 			@touchmove.stop.prevent
@@ -49,9 +49,6 @@
 			
 			overlay: Boolean,
 			persistent: Boolean,
-			noSwipeOpen: Boolean,
-			noSwipeClose: Boolean,
-			noSwipeBackdrop: Boolean
 		},
 		
 		emits: [...useModelToggleEmits],
@@ -61,17 +58,19 @@
 			const isDark = useDark(props, $q)
 			const showing = ref(props.modelValue === true)
 			const fixed = computed(() => props.overlay === true )
-			
+			uni.$on('drawer-pushed', (dir)=>{
+				showing.value = props.side == dir
+			})
 			const classes = computed(() =>
 				`q-drawer q-drawer--${ props.side }` +
-				(props.modelValue === true ? ' q-drawer__show' : '') +
+				(showing.value === true ? ' q-drawer__show' : '') +
 				//(flagMiniAnimate.value === true ? ' q-drawer--mini-animate' : '') +
 				(props.bordered === true ? ' q-drawer--bordered' : '') +
 				(isDark.value === true ? ' q-drawer--dark q-dark' : '')
 				//(fixed.value === true ? ' fixed' : '')
 			)
 			const backgropClass = computed(()=>({
-				'q-drawer__backdrop__show': props.modelValue
+				'q-drawer__backdrop__show': showing.value
 			}))
 			
 			const style = reactive({
@@ -82,7 +81,10 @@
 			const { show, hide } = useModelToggle({showing})
 			// 点击遮罩层
 			function onClickBackGroup(evt){
-				if(props.persistent !== true) hide(evt)
+				if(props.persistent !== true){
+					hide(evt)
+					uni.$emit('drawer-close')
+				}
 			}
 			return {
 				showing,

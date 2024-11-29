@@ -61,6 +61,7 @@ const getDftStr = ({lifa,modelValue,hideLifa,defaults})=>{
 
 
 export default ({ props,emit })=>{
+	
 	const min = qdate(props.min)
 	const max = qdate(props.max)
 	// 默认日期字符串
@@ -160,7 +161,6 @@ export default ({ props,emit })=>{
 		emit('confirm', dateVal)
 		close();
 	}
-	
 	
 	return {
 		colName: ['年','月','日','时','分','秒'],

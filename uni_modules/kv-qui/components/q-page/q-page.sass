@@ -7,36 +7,49 @@ page
 
 .q-page
   background: $grey-4
-  transition: all 0.15s ease-in
+  transition: all 0.15s ease-out
   box-sizing: border-box
-  &-container
-    flex: 10000 1 0%
+  &.pushing .q-header,
   &-pushed .q-header
     top: 0 !important
-  .has-head
-    .q-page-loading-bar
-      top: var(--header-height)
   &-loading-bar
     position: fixed !important
-    top: var(--header-height)
-    /* #ifdef H5 */
-    /*#endif*/
+    top: var(--head-height)
     left: 0
     right: 0
     z-index: $z-marginals
 
 q-page, .q-page
-  min-height: calc(100vh - var(--window-top))
-
+  min-height: var(--page-height)
+  
 .q-header, .q-footer, .q-page, .q-page-container
   position: relative
 
 .q-page-container
+  /*flex: 10000 1 0%*/
+  min-height: var(--container-height)
   max-width: 100%
 
-scroll-view.q-page-container
-  max-height: var(--container-height)
 
+.has-head::before,.has-foot::after
+  display: block
+  content: ''
+  width: 100%
+
+.has-head
+  &::before
+    height: var(--header-space)
+  .q-page-loading-bar
+    top: var(--head-height)
+
+.has-foot
+  &::after
+    height: var(--footer-space)
+
+scroll-view.q-page-container
+  height: var(--container-height)
+
+q-footer,
 .q-header, .q-footer
   z-index: $z-marginals
   background-color: $grey-1
@@ -44,8 +57,6 @@ scroll-view.q-page-container
 .q-header
   padding-left: 5px
   padding-right: 5px
-  //height: var(--header-height)
-  //padding-top: env(safe-area-inset-top)
   &--hidden
     transform: translateY(-110%)
   &--bordered
@@ -55,7 +66,13 @@ scroll-view.q-page-container
     &:after
       bottom: 10px
 
-.q-footer
+q-footer,.q-footer
+  position: fixed
+  left: 0
+  right: 0
+  top: calc(100vh - var(--foot-height) - var(--bottom-space))
+  height: var(--footer-space)
+  //bottom: 0
   q-tabs,.q-tabs
     flex: 10000 1 0%
   &--hidden

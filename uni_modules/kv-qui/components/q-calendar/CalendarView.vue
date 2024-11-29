@@ -72,6 +72,8 @@
 			innerValue.value = toStrDate(vo)
 		}
 	});
+	// 日期更新
+	watch(()=>props.modelValue, (val)=>innerValue.value = val)
 
 	// 日历默认：年-月，传入year-month = [year,month]
 	const dateYm = ref(parseYm(props.defaultYearMonth));
@@ -142,12 +144,13 @@
 	}
 
 	function getClasses(day) {
+		const is_today = innerValue.value==day.format('YYYY-MM-DD')
 		return [
 			day.current ? 'current' : 'outday',
 			day.prev ? 'prev' : '',
 			day.next ? 'next' : '',
 			day.today ? (props.todayClass || 'today') : '',
-			day.isSame(innerValue.value, 'day') ? (props.activeClass || 'selected') : ''
+			is_today ? (props.activeClass || 'selected') : ''
 		]
 	}
 </script>

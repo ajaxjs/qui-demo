@@ -1,18 +1,19 @@
 import './css/index.sass'
-
-import {
-	quasarKey
-} from './utils/private/symbols.js'
+import { nextTick } from 'vue'
+import { quasarKey } from './utils/private/symbols.js'
 //import Body from './body.js'
 import IconSet from './icon-set.js'
 import Dark from './plugins/Dark.js'
 import Platform from './plugins/Platform.js'
 import ClosePopup from './plugins/ClosePopup.js'
+import deepmerge from './utils/deep-merge.js';
+import Config from './config.js'
 
 import * as utils from './utils.js'
 
 // uni-app 封装
-import uniApi from './utils/uniapp/index.js'
+import uniApi from './uni.js'
+
 const colors = {
 	"red": "#f44336",
 	"pink": "#e91e63",
@@ -34,6 +35,7 @@ const colors = {
 	"grey": "#9e9e9e",
 	"blue-grey": "#607d8b"
 }
+
 // 默认安装
 const autoInstalledPlugins = [
 	Platform,
@@ -46,7 +48,7 @@ const autoInstalledPlugins = [
 // 安装插件
 function installPlugins(pluginOpts, pluginList) {
 	pluginList.forEach((Plugin, i) => {
-		if(!Plugin.__installed){
+		if (!Plugin.__installed) {
 			Plugin.install(pluginOpts)
 			Plugin.__installed = true
 		}
@@ -56,14 +58,11 @@ function installPlugins(pluginOpts, pluginList) {
 const install = (app, uiOpts = {}) => {
 	const $q = {
 		utils,
-		version: '2.20.0',
+		version: '2.21.0',
 		colors
 	}
 	// 配置
-	$q.config = Object.assign(uiOpts.config || {}, {
-		headHeight: 44,
-		footHeight: 50
-	})
+	$q.config = deepmerge({}, Config, uiOpts)
 
 	const pluginOpts = {
 		parentApp: app,
@@ -74,11 +73,11 @@ const install = (app, uiOpts = {}) => {
 	// 安装默认组件
 	installPlugins(pluginOpts, autoInstalledPlugins)
 	// 安装导入组件
-	if(Array.isArray(uiOpts.plugins) && uiOpts.plugins.length){
+	if (Array.isArray(uiOpts.plugins) && uiOpts.plugins.length) {
 		installPlugins(pluginOpts, uiOpts.plugins);
 	}
 	// 挂载第三方插件
-	if(uiOpts.external && Object.keys(uiOpts.external)){
+	if (uiOpts.external && Object.keys(uiOpts.external)) {
 		app.config.globalProperties.$ext = uiOpts.external;
 	}
 

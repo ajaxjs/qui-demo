@@ -190,9 +190,4 @@ input[type='search']::-webkit-search-decoration
     vertical-align: middle
     margin-right: 5px
 .q-checked
-  /* #ifdef MP-WEIXIN */
-  color: #09BB07
-  /* #endif */
-  /* #ifndef MP-WEIXIN */
-  color: #{$primary}
-  /* #endif */
+  color: var(--q-primary)

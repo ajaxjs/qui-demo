@@ -1,8 +1,10 @@
 <template>
 	<view class="q-calendar__year q-calendar__view row">
 		<q-btn flat dense :icon="$q.iconSet.tabs.left" @click="year-=11" />
-		<view class="col row">
-			<q-btn v-bind="buildAttrs(y)" v-for="(y) in yearArr" :key="y" @click="onChoose(y)" />
+		<view class="col row q-gutter-sm">
+			<view class="" v-for="(y) in yearArr" :key="y">
+				<q-btn v-bind="buildAttrs(y)" @click="onChoose(y)" />
+			</view>
 		</view>
 		<q-btn flat dense :icon="$q.iconSet.tabs.right" @click="year+=11" />
 	</view>
@@ -21,7 +23,8 @@
 	const yearArr = computed(() => {
 		const cyear = parseInt(year.value);
 		const years = []
-		for (let i = cyear - 10; i <= cyear + 10; i++) {
+		const offyear = 16
+		for (let i = cyear - offyear; i <= cyear + offyear; i++) {
 			years.push(i + '')
 		}
 		return years;
@@ -41,7 +44,7 @@
 		if (isActive) {
 			attrs.unelevated = true;
 		} else {
-			attrs.flat = true;
+			attrs.outline = true;
 		}
 		return attrs;
 	}

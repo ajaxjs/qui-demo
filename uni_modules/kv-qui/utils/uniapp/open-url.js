@@ -1,6 +1,6 @@
-import quiConf from '@/qui.config.js'
-import {parseUrl} from '../parse-url.js'
-
+import quiConf from '../../config.js'
+import parseUrl from '../parse-url.js'
+import pagesConf from '@/pages.json'
 
 // 获取转换navigate跳转类型
 export function getOpenType(target){
@@ -11,7 +11,7 @@ export function getOpenType(target){
 		'_top'		: 'reLaunch',
 		'_exit'		: 'exit',
 	}
-	return target? (targInf[target] || target) : 'navigate'
+	return target ? (targInf[target] || target) : 'navigate'
 }
 
 // 连接参数格式化
@@ -26,6 +26,13 @@ export function formatParam(evt, defaultOpts){
 				prms[key] = prms[key].toString()
 			}
 		})
+	}
+	const {tabBar} = pagesConf;
+	if(prms.to && tabBar){
+		const intab = tabBar.list.filter(vo=>vo.pagePath==prms.to.replace(/^\//,'')).length;
+		if(intab){
+			prms.target = '_tab';
+		}
 	}
 	return Object.assign({}, defaultOpts, prms)
 }
@@ -62,10 +69,10 @@ export function openUrl(evt) {
 		url = to
 	}else if(href){
 		// 读取webView路径
-		root = root || quiConf.config.webViewPath
+		root = root || quiConf.webViewPath
 		if(!root) return console.error('配置文件的 webViewPath 未设置！')
 		// 远程网址，加入web-view路径
-		url = root+'?url='+href
+		url = '/'+root+'?url='+href
 	}else{
 		return null;
 	}

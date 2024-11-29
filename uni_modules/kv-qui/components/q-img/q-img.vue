@@ -163,7 +163,6 @@
 				isLoading.value = false
 				hasError.value = true
 				emit('error', err)
-				console.log('onError', err);
 			}
 			
 			return {

@@ -1,6 +1,7 @@
 import { computed } from 'vue'
 import { isNumber } from '../../utils/is.js'
 import {useAttrProps} from './use-attr.js'
+import conf from '../../config.js'
 
 export const useOptionProps = {
 	...useAttrProps,
@@ -26,7 +27,6 @@ export const useOptionProps = {
 }
 
 export default function(props){
-	//const { proxy:{$q} } = getCurrentInstance()
 	
 	const trueValue = props.val !== void 0 ? props.val : true
 	
@@ -34,7 +34,10 @@ export default function(props){
 	
 	// 格式化option
 	const opts = computed(()=>{
-		const {label, disable, color,checkedIcon,uncheckedIcon,icon} = props
+		let {label, disable, color,checkedIcon,uncheckedIcon,icon} = props
+		if(conf.config.brand?.primary){
+			color = conf.config.brand?.primary;
+		}
 		return isGroup.value ? props.options.map(vo => {
 			vo = typeof(vo)=='object' ? vo : {label: vo,value: vo}
 			vo = Object.assign({

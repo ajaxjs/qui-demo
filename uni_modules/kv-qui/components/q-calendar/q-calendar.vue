@@ -85,6 +85,7 @@
 	}))
 
 	function emitValue(val, day, evt) {
+		innerValue.value = val;
 		today.value = day;
 		emit('update:modelValue', val, day, evt)
 	}
@@ -99,7 +100,7 @@
 	function setToday(date) {
 		const day = dayjs(date);
 		if (day && day.isValid()) {
-			today.value = day;
+			//today.value = day;
 			emitValue(toStrDate(day), day)
 		} else {
 			console.error('非法日期！');

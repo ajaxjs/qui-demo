@@ -4,10 +4,10 @@ const Platform = {
 		const { $q } = opts
 		const platform = Object.assign(
 			uni.getWindowInfo(), 
-			uni.getSystemInfoSync(),
+			uni.getDeviceInfo(),
+			uni.getAppBaseInfo()
 		)
 		$q.platform = platform
 	}
 }
-
 export default Platform

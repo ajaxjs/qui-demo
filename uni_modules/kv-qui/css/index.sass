@@ -2,7 +2,9 @@
 @import './helpers/math.sass'
 
 @import './variables.sass'
+/* #ifndef MP */
 @import './normalize.sass'
+/* #endif */
 
 /* Components */
 @import '../components/q-page/q-page.sass'
@@ -23,6 +25,7 @@
 @import '../components/q-chip/q-chip.sass'
 @import '../components/q-skeleton/q-skeleton.sass'
 @import '../components/q-calendar/q-calendar.scss'
+@import '../components/q-chat-message/q-chat-message.sass'
 
 
 @import '../components/q-field/q-field.sass'
@@ -43,3 +46,9 @@
 @import './core/typography.sass'
 @import './core/visibility.sass'
 @import './core/dark.sass'
+
+/* #ifdef H5 */
+uni-toast, .uni-toast,
+uni-modal,.uni-modal
+  z-index: 6001
+/* #endif */

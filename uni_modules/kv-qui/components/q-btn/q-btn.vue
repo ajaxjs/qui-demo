@@ -48,6 +48,7 @@
 	import QIcon from '../q-icon/q-icon.vue'
 	import QSpinner from '../q-spinner/q-spinner.vue'
 	import QRipple from '../q-ripple/q-ripple.vue'
+	import {openUrl} from '../../utils/uniapp/open-url.js'
 
 	let touchTarget = null, keyboardTarget = null, mouseTarget = null
 
@@ -108,7 +109,9 @@
 					switch (name){
 						case 'click':
 							this.$refs.ripple.ripple(evt)
-							this.$uni.openUrl(this.linkAttrs)
+							if(this.linkAttrs){
+								openUrl(this.linkAttrs)
+							}
 							break;
 						default:
 							break;

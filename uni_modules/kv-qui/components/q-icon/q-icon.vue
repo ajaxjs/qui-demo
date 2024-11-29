@@ -147,7 +147,7 @@
 	        cls = icon
 	      }
 	      else if (ionRE.test(icon) === true) {
-	        cls = `ionicons ion-${ $q.platform.is.ios === true ? 'ios' : 'md' }${ icon.substring(3) }`
+	        cls = `ionicons ion-${ $q.platform.platform === 'ios' ? 'ios' : 'md' }${ icon.substring(3) }`
 	      }
 	      else if (symRE.test(icon) === true) {
 	        // "notranslate" class is for Google Translate

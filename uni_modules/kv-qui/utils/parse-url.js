@@ -1,21 +1,20 @@
 // URL解析
 const field = {
-	'Username': 4,
-	'Password': 5,
-	'Port': 7,
-	'ProtocolHead': 1,
-	'Protocol': 2,
-	'Host': 6,
-	'Pathname': 8,
-	'URL': 0,
-	'Querystring': 9,
-	'Hash': 10
+	'username': 4,
+	'password': 5,
+	'port': 7,
+	'protocolHead': 1,
+	'protocol': 2,
+	'host': 6,
+	'pathname': 8,
+	'query': 9,
+	'hash': 10
 }
 // 匹配
 const regex = /^((\w+):\/\/)?((\w+):?(\w+)?@)?(\/?[^\/\?:]+):?(\d+)?(\/?[^\?#]+)?\??([^#]+)?#?(\w*)/;
 
 // Query字符串转对象
-export const queryParse = function(qs) {
+export function queryParse(qs) {
 	let items = qs && typeof(qs) == 'string' ? qs.split("&") : [];
 	let result = {}
 	let arr = [];
@@ -35,7 +34,7 @@ export const queryParse = function(qs) {
 };
 
 // Query对象转字符串
-export const queryString = function(obj) {
+export function queryString(obj) {
 	let str = ''
 	if (typeof obj == 'object') {
 		for (let i in obj) {
@@ -49,7 +48,8 @@ export const queryString = function(obj) {
 	}
 	return str.replace(/&$/g, '');
 }
-const changeSonType = function(objName, objValue) {
+
+function changeSonType(objName, objValue) {
 	if (typeof objValue == 'object') {
 		for (let i in objValue) {
 			if (typeof objValue[i] != 'object') {
@@ -63,56 +63,67 @@ const changeSonType = function(objName, objValue) {
 	return nextStr;
 }
 
-// 解析URL
-export const parseUrl = function(href, prms) {
-	let url = {}
-	let urlArr = regex.exec(href);
-	for (let i in field) {
-		let ki = field[i]
-		let vo = urlArr[ki]
-		url[i] = vo !== undefined ? vo : ''
-	}
-	if (prms && typeof(prms) == 'string') {
-		prms = queryParse(prms)
-	}
-	url['Params'] = Object.assign({}, queryParse(url['Querystring']), prms)
-	url.Querystring = queryString(url['Params'])
 
-	// 设置参数
-	url.setParam = function(name, val) {
-		let param = {}
-		if (typeof(name) == 'object') {
-			param = name
-		} else if (name && val !== undefined) {
-			param[name] = val
+class Url {
+	constructor(url) {
+		this.parse(url)
+	}
+	// 克隆新对象
+	clone() {
+		return clone(this)
+	}
+	// 解析URL
+	parse(url) {
+		let urlRex = regex.exec(url);
+		this.URL = urlRex[0]
+		for (let key in field) {
+			const i = field[key];
+			this[key] = urlRex[i];
 		}
-		Object.assign(url.Params, param)
-		url.Querystring = queryString(url['Params'])
-		return url
+		if (this.query) {
+			this.query = queryParse(this.query)
+		}
 	}
-	// 转为URL字符串
-	url.toString = function(urlObj) {
-		urlObj = urlObj || url
-		const urlStr = urlObj.ProtocolHead +
-			urlObj.Username +
-			(urlObj.Username ? ':' : '') +
-			urlObj.Password +
-			(urlObj.Username ? '@' : '') +
-			urlObj.Host +
-			(urlObj.Port ? ':' : '') +
-			urlObj.Port +
-			urlObj.Pathname +
-			(urlObj.Pathname ? '?' : '') +
-			urlObj.Querystring +
-			(urlObj.Hash ? '#' : '') +
-			urlObj.Hash
-		return urlStr
+	// URL设置
+	set(name, value) {
+		if (field[name]) {
+			this[name] = value
+		} else if (name == 'query') {
+			console.error('设置query请使用setQuery!');
+		} else {
+			console.error('参数不可用!');
+		}
 	}
-	return url
+	// 设置参数
+	setQuery(name, value) {
+		if (typeof name === 'object') {
+			for (let i in name) {
+				this.query[i] = name[i];
+			}
+		} else {
+			this.query[name] = value
+		}
+	}
+	
+	// 删除参数
+	delQuery(name) {
+		let nameArr = Array.isArray(name) ? name : [name];
+		nameArr.forEach(key => delete this.query[key])
+	}
+
+	// 字符串
+	toString() {
+		return (this.protocolHead ? this.protocolHead + ':' : '') +
+			(this.username ? this.username + ':' : '') +
+			(this.password ? this.password + '@' : '') +
+			(this.host ? this.host : '') +
+			(this.port ? ':' + this.port : '') +
+			(this.pathname ? this.pathname : '') +
+			(this.query ? '?' + queryString(this.query) : '') +
+			(this.hash ? '#'+this.hash : '')
+	}
 }
 
-export default {
-	parse: parseUrl,
-	deQuery: queryParse,
-	enQuery: queryString,
+export default function(url) {
+	return url instanceof Url ? Url.clone() : new Url(url)
 }

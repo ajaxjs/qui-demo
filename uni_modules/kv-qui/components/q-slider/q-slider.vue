@@ -24,7 +24,6 @@
 		setup(props,{emit}){
 			const $q = inject(quasarKey)
 			const getHex = vo=>$q.colors[vo] || vo
-			console.log(getHex(props.blockColor));
 			function change(evt){
 				if(!props.immediate) emit('update:modelValue', evt.detail.value)
 				emit('change',evt)

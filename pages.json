@@ -194,6 +194,12 @@
 			}
 		},
 		{
+			"path": "pages/components/chat_message",
+			"style": {
+				"navigationBarTitleText": "Chat Message"
+			}
+		},
+		{
 			"path": "pages/plugins/uniapp",
 			"style": {
 				"navigationBarTitleText": "Uniapp 封装"

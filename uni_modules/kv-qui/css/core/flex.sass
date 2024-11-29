@@ -163,3 +163,9 @@
 
 @each $name, $size in $sizes
   @include fg("-" + $name, $size)
+
+/* #ifdef MP */
+[class*="-gutter-"]
+  > form-field
+    display: block
+/* #endif */

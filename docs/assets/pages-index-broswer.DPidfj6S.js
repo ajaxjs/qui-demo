@@ -1,1 +1,0 @@
-import{_ as e,g as s,i as o,o as r}from"./index-BM1HHzio.js";const t=e({data:()=>({url:"",webviewStyles:{progress:{color:"#F33"}}}),onLoad({url:e}){this.url=e}},[["render",function(e,t,a,l,n,d){const i=o;return r(),s(i,{"webview-styles":n.webviewStyles,src:n.url,"update-title":!0,onLoad:e.onLoaded},null,8,["webview-styles","src","onLoad"])}]]);export{t as default};
